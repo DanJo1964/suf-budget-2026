@@ -1,4 +1,4 @@
-﻿Attribute VB_GlobalNameSpace = False
+Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
@@ -30,8 +30,8 @@ Private Sub btnOpretAfd_Click()
     Dim strAfd As String
     Dim intYear As Integer
 
-    strAfd = Nz(Me.cboAfdeling.value, "")
-    intYear = Nz(Me.cboYear.value, 0)
+    strAfd = Nz(Me.cboAfdeling.Value, "")
+    intYear = Nz(Me.cboYear.Value, 0)
 
     If Len(strAfd) = 0 Or intYear = 0 Then
         MsgBox "Indtast Afdeling, År og Revision"
@@ -41,6 +41,23 @@ Private Sub btnOpretAfd_Click()
     If Nz(ELookup("Year_", "tblFBBudget", "Year_ = " & intYear), -1) = -1 Then
         MsgBox "Fællesbidrag er ikke beregnet for dette år: " & intYear
         Exit Sub
+    End If
+
+    ' Hvis åbnet fra Prisberegning: oversæt PrisberegningNavn → AfdNr Uniconta
+    ' PrisberegningNavn = tblAfdeling.Afdeling = tblAfdeling.[AfdNr Uniconta]
+    ' fncInitTilbud og alle underfunktioner forventer [AfdNr Uniconta] formatet
+    If Nz(TempVars("tsFromPrisberegning").Value, False) = True Then
+        Dim strAfdUniconta As String
+        strAfdUniconta = Nz(ELookup("[AfdNr Uniconta]", "tblAfdeling", _
+                            "Afdeling = '" & strAfd & "' AND Year_ = " & intYear), "")
+
+        If strAfdUniconta = "" Then
+            MsgBox "Kunne ikke finde afdelingen '" & strAfd & "' i tblAfdeling." & vbCrLf & _
+                   "Kontrollér at prisberegningsnavnet svarer til en afdeling.", vbExclamation
+            Exit Sub
+        End If
+
+        strAfd = strAfdUniconta
     End If
 
     Call fncInitTilbud(strAfd, intYear)
@@ -59,7 +76,7 @@ End Sub
 
 Private Sub cboAfdeling_GotFocus()
     ' Hvis åbnet fra Prisberegning – behold prisberegnings-listen
-    If Nz(TempVars("tsFromPrisberegning").value, False) = True Then
+    If Nz(TempVars("tsFromPrisberegning").Value, False) = True Then
         Exit Sub
     End If
 
@@ -67,7 +84,7 @@ Private Sub cboAfdeling_GotFocus()
     Dim str As String
 
     'get the selected year from the other combobox
-    strYear = Nz(Me.cboYear.value, 0)
+    strYear = Nz(Me.cboYear.Value, 0)
 
     'set the data source to a query that filters by year
     str = "SELECT [AfdNr Uniconta], AfdelingsNavn FROM tblAfdeling WHERE Year_ = " & CInt(strYear) & " ORDER BY [AfdNr Uniconta]"
@@ -88,30 +105,31 @@ Private Sub Form_Load()
         arrArgs = Split(Me.OpenArgs, "|")
 
         If UBound(arrArgs) >= 2 Then
-            TempVars("tsFromPrisberegning").value = True
-            TempVars("tsPrisberegningID").value = CLng(arrArgs(0))
-            TempVars("tsPrisberegningNavn").value = arrArgs(1)
-            TempVars("tsYear").value = CInt(arrArgs(2))
+            TempVars("tsFromPrisberegning").Value = True
+            TempVars("tsPrisberegningID").Value = CLng(arrArgs(0))
+            TempVars("tsPrisberegningNavn").Value = arrArgs(1)
+            TempVars("tsYear").Value = CInt(arrArgs(2))
 
             ' Skift label og udfyld combobox med prisberegninger
             Me.Label37.Caption = "Vælg prisberegning"
-            Me.cboYear.value = CInt(arrArgs(2))
+            Me.cboYear.Value = CInt(arrArgs(2))
 
-            ' Sæt RowSource til prisberegninger for det valgte år
+            ' Sæt RowSource til PrisberegningNavn fra tblPrisberegning
+            ' PrisberegningNavn = AfdU = Afdeling (samme værdi på tværs af tabeller)
             Dim strSQL As String
-            strSQL = "SELECT ID, PrisberegningNavn FROM tblPrisberegning " & _
+            strSQL = "SELECT PrisberegningNavn, PrisberegningNavn FROM tblPrisberegning " & _
                      "WHERE BudgetAar = " & arrArgs(2) & " ORDER BY PrisberegningNavn"
+            Me.cboAfdeling.ColumnCount = 2
+            Me.cboAfdeling.ColumnWidths = "0;5000"
             Me.cboAfdeling.RowSource = strSQL
-            Me.cboAfdeling.BoundColumn = 2
             Me.cboAfdeling.Requery
-            Me.cboAfdeling.value = arrArgs(1)
+            Me.cboAfdeling.Value = arrArgs(1)
         End If
     Else
         ' Normal åbning – hent senest brugte afdeling og år
-        TempVars("tsFromPrisberegning").value = False
+        TempVars("tsFromPrisberegning").Value = False
         Me.cboYear = Nz(ELookup("Year_", "tblCurrentYearDepartment", "CurrentUser = '" & Environ("UserName") & "'"), 0)
         Me.cboAfdeling = Nz(ELookup("[AfdNr Uniconta]", "tblCurrentYearDepartment", "CurrentUser = '" & Environ("UserName") & "'"), "")
-        Me.cboAfdeling.BoundColumn = 1
     End If
 
     Call FilterYearAfd
@@ -119,12 +137,12 @@ End Sub
 Private Sub FilterYearAfd()
     Dim strFilter As String
 
-    If Nz(TempVars("tsFromPrisberegning").value, False) = True Then
-        ' -- Åbnet fra Prisberegning: filtrer på PrisberegningNavn --
+    If Nz(TempVars("tsFromPrisberegning").Value, False) = True Then
+        ' ── Åbnet fra Prisberegning: filtrer på AfdU (= PrisberegningNavn = Afdeling) ──
         Dim strNavn As String
         Dim intYear As Integer
-        strNavn = Nz(TempVars("tsPrisberegningNavn").value, "")
-        intYear = Nz(TempVars("tsYear").value, 0)
+        strNavn = Nz(TempVars("tsPrisberegningNavn").Value, "")
+        intYear = Nz(TempVars("tsYear").Value, 0)
 
         If strNavn <> "" Then
             strFilter = "[AfdU] = '" & strNavn & "'"
@@ -133,12 +151,12 @@ Private Sub FilterYearAfd()
             End If
         End If
     Else
-        ' -- Normal åbning: filtrer på AfdU og Year_ --
-        If Not IsNull(Me.cboAfdeling.value) Then
-            strFilter = strFilter & "[AfdU]= '" & Me.cboAfdeling.value & "' AND "
+        ' ── Normal åbning: filtrer på AfdU og Year_ ──
+        If Not IsNull(Me.cboAfdeling.Value) Then
+            strFilter = strFilter & "[AfdU]= '" & Me.cboAfdeling.Value & "' AND "
         End If
-        If Not IsNull(Me.cboYear.value) Then
-            strFilter = strFilter & "[Year_]= " & Me.cboYear.value & " AND "
+        If Not IsNull(Me.cboYear.Value) Then
+            strFilter = strFilter & "[Year_]= " & Me.cboYear.Value & " AND "
         End If
         ' Fjern afsluttende "AND "
         If Len(strFilter) > 0 Then
@@ -147,16 +165,16 @@ Private Sub FilterYearAfd()
     End If
 
     ' Anvend filter på alle subforms i TabControl
-    Me.TabCtl3.Pages("tabBudget").Controls("frmSUF_TilbudsSkabelon").Form.filter = strFilter
+    Me.TabCtl3.Pages("tabBudget").Controls("frmSUF_TilbudsSkabelon").Form.Filter = strFilter
     Me.TabCtl3.Pages("tabBudget").Controls("frmSUF_TilbudsSkabelon").Form.FilterOn = True
 
-    Me.TabCtl3.Pages("tabEconomy").Controls("frmSUF_TilbudsSkabelon_NoegleTal").Form.filter = strFilter
+    Me.TabCtl3.Pages("tabEconomy").Controls("frmSUF_TilbudsSkabelon_NoegleTal").Form.Filter = strFilter
     Me.TabCtl3.Pages("tabEconomy").Controls("frmSUF_TilbudsSkabelon_NoegleTal").Form.FilterOn = True
 
-    Me.TabCtl3.Pages("tabKoncern").Controls("frmSUF_TilbudsSkabelon_Koncernnote").Form.filter = strFilter
+    Me.TabCtl3.Pages("tabKoncern").Controls("frmSUF_TilbudsSkabelon_Koncernnote").Form.Filter = strFilter
     Me.TabCtl3.Pages("tabKoncern").Controls("frmSUF_TilbudsSkabelon_Koncernnote").Form.FilterOn = True
 
-    Me.TabCtl3.Pages("tabFive").Controls("frmSUF_TilbudsSkabelon_FemPlus").Form.filter = strFilter
+    Me.TabCtl3.Pages("tabFive").Controls("frmSUF_TilbudsSkabelon_FemPlus").Form.Filter = strFilter
     Me.TabCtl3.Pages("tabFive").Controls("frmSUF_TilbudsSkabelon_FemPlus").Form.FilterOn = True
 End Sub
 

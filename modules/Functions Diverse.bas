@@ -94,6 +94,8 @@ Public Sub ChangeAppTitle(newTitle As String)
 End Sub
 Public Function IsLoaded(strFormName As String) As Boolean
     IsLoaded = (SysCmd(acSysCmdGetObjectState, acForm, strFormName) <> 0)
+    'kommentar
+
 End Function
 Public Function CopyRecordWithoutIdentityReturnID(lngIDToCopy As Long, Optional strTableName As String) As Long
     On Error GoTo ErrHandler

@@ -1,0 +1,10 @@
+﻿{
+  "Info": {
+    "Class": "clsDbProjProperty",
+    "Description": "Project Properties (Access)"
+  },
+  "Items": {
+    "VCS Build Path": "C:\\Temp\\SUF\\Development",
+    "VCS Source Path": "C:\\Temp\\SUF\\Development\\github\\suf-budget-2026"
+  }
+}

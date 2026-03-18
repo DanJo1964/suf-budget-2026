@@ -17,6 +17,110 @@
     "TextDelim": "\"",
     "TimeDelim": ":",
     "Columns": {
+      "Status Dato": {
+        "Attributes": 0,
+        "DataType": 8,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 60,
+        "Width": 12
+      },
+      "SUF Veteran": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1168,
+        "Width": 12
+      },
+      "SWIFT": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1067,
+        "Width": 6
+      },
+      "Takst": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1,
+        "Width": 6
+      },
+      "Telefon": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 434,
+        "Width": 12
+      },
+      "Uddannelse": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1180,
+        "Width": 11
+      },
+      "Underhold": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 80,
+        "Width": 10
+      },
+      "Valutakode": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 274,
+        "Width": 11
+      },
+      "Varenavnegruppe": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 540,
+        "Width": 16
+      },
+      "Vedhæftet fil": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1013,
+        "Width": 14
+      },
+      "Vores kontonummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 943,
+        "Width": 18
+      },
+      "WWW": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 986,
+        "Width": 4
+      },
+      "Xtra takst": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 90,
+        "Width": 11
+      },
       "Adresse 1": {
         "Attributes": 0,
         "DataType": 10,
@@ -640,110 +744,6 @@
         "SkipColumn": false,
         "Start": 7,
         "Width": 7
-      },
-      "Status Dato": {
-        "Attributes": 0,
-        "DataType": 8,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 60,
-        "Width": 12
-      },
-      "SUF Veteran": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 1168,
-        "Width": 12
-      },
-      "SWIFT": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 1067,
-        "Width": 6
-      },
-      "Takst": {
-        "Attributes": 0,
-        "DataType": 5,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 1,
-        "Width": 6
-      },
-      "Telefon": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 434,
-        "Width": 12
-      },
-      "Uddannelse": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 1180,
-        "Width": 11
-      },
-      "Underhold": {
-        "Attributes": 0,
-        "DataType": 5,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 80,
-        "Width": 10
-      },
-      "Valutakode": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 274,
-        "Width": 11
-      },
-      "Varenavnegruppe": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 540,
-        "Width": 16
-      },
-      "Vedhæftet fil": {
-        "Attributes": 0,
-        "DataType": 4,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 1013,
-        "Width": 14
-      },
-      "Vores kontonummer": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 943,
-        "Width": 18
-      },
-      "WWW": {
-        "Attributes": 0,
-        "DataType": 10,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 986,
-        "Width": 4
-      },
-      "Xtra takst": {
-        "Attributes": 0,
-        "DataType": 5,
-        "IndexType": 0,
-        "SkipColumn": false,
-        "Start": 90,
-        "Width": 11
       }
     }
   }

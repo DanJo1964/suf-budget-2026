@@ -3,13 +3,12 @@ Beginning Export of Source Files
 SUF_Budget_Dev_1.accdb
 VCS Version 4.1.2
 Full Path: C:\Temp\SUF\Development\SUF_Budget_Dev_1.accdb
-Export Folder: C:\Temp\SUF\Development\SUF_Budget_Dev_1.accdb.src\
+Export Folder: C:\Temp\SUF\Development\github\suf-budget-2026\
 Performing Full Export
-18-03-2026 10:55:31
+18-03-2026 11:05:42
 -------------------------------------
 Scanning source files...
 No vbe forms found in this database.
-No proj properties found in this database.
 No commandbars found in this database.
 No table data macros found in this database.
 No relations found in this database.
@@ -34,6 +33,10 @@ Exporting vb project...
 Exporting vbe references...   
   stdole
 [14]
+-------------------------------------
+Exporting proj properties...  
+  Current Project Properties (Access)
+[2]
 -------------------------------------
 Exporting saved specs...      
   Import-DebtorClientUser
@@ -105,7 +108,7 @@ Exporting imex specs...
 -------------------------------------
 Exporting tables...           
   _Konteringsvejledning
-    Sanitized in 0,001 seconds.
+    Sanitized in 0,002 seconds.
   _Konteringsvejledning (SQL)
   _UdspecFB
     Sanitized in 0,001 seconds.
@@ -196,7 +199,7 @@ Exporting tables...
 -------------------------------------
 Exporting queries...          
   _OLD_qryUpdateTmpDebitor
-    Sanitized in 0,003 seconds.
+    Sanitized in 0,004 seconds.
   _OLD_qryUpdateTmpDebitor (SQL)
   _Query6
     Sanitized in 0,001 seconds.
@@ -205,7 +208,7 @@ Exporting queries...
     Sanitized in 0,001 seconds.
   _SkalSlettes_Insert_GLTrans_Fra_Lokal (SQL)
   _SkalSlettes_Insert_GLTransSum_Fra_Lokal
-    Sanitized in 0,002 seconds.
+    Sanitized in 0,001 seconds.
   _SkalSlettes_Insert_GLTransSum_Fra_Lokal (SQL)
   _SkalSlettes_TestAfJoinMlmStamkortOgGLTrans
     Sanitized in 0,001 seconds.
@@ -217,7 +220,7 @@ Exporting queries...
     Sanitized in 0,001 seconds.
   qryAfdAdresser (SQL)
   qryCross_IBsum_Afd
-    Sanitized in 0,015 seconds.
+    Sanitized in 0,014 seconds.
   qryCross_IBsum_Afd (SQL)
   qryDebtor_SumÅr
     Sanitized in 0,001 seconds.
@@ -235,7 +238,7 @@ Exporting queries...
     Sanitized in 0,001 seconds.
   qryFinBudget_SumÅr (SQL)
   qryFinPost_AntalMdr
-    Sanitized in 0,000 seconds.
+    Sanitized in 0,001 seconds.
   qryFinPost_AntalMdr (SQL)
   qryFinPost_Basis
     Sanitized in 0,000 seconds.
@@ -250,7 +253,7 @@ Exporting queries...
     Sanitized in 0,001 seconds.
   qryFinPost_KtoAfdBlb12Mdr (SQL)
   qryFinPost_KtoAfdBlbFrq12
-    Sanitized in 0,002 seconds.
+    Sanitized in 0,001 seconds.
   qryFinPost_KtoAfdBlbFrq12 (SQL)
   qryFinPost_KtoAfdBlbFrqMsc
     Sanitized in 0,001 seconds.
@@ -337,7 +340,7 @@ Exporting queries...
     Sanitized in 0,002 seconds.
   Query5 (SQL)
   Query7
-    Sanitized in 0,001 seconds.
+    Sanitized in 0,000 seconds.
   Query7 (SQL)
   Query9
     Sanitized in 0,001 seconds.
@@ -364,13 +367,13 @@ Exporting forms...
   frmSUF_ChooseBudgetYear
     Sanitized in 0,004 seconds.
   frmAfdMedarbBudget
-    Sanitized in 0,016 seconds.
+    Sanitized in 0,017 seconds.
   frmParm_LønartKonto
     Sanitized in 0,002 seconds.
   frmSUF_InterntBudget
     Sanitized in 0,013 seconds.
   frmTmpAfdDebitorBudget
-    Sanitized in 0,006 seconds.
+    Sanitized in 0,005 seconds.
   frmTmpAfdMedarbejdBudget
     Sanitized in 0,007 seconds.
   frmAfdDebitorBudget
@@ -380,19 +383,19 @@ Exporting forms...
   frmFBBudget
     Sanitized in 0,001 seconds.
   frmSUF_Rapporter
-    Sanitized in 0,004 seconds.
+    Sanitized in 0,005 seconds.
   frmSUF_TilbudsSkabelon_FemPlus
     Sanitized in 0,003 seconds.
   frmParm_Løntrin
-    Sanitized in 0,003 seconds.
+    Sanitized in 0,004 seconds.
   frmSUF_FB_Budget
-    Sanitized in 0,005 seconds.
+    Sanitized in 0,007 seconds.
   frmParm_Timeløn
-    Sanitized in 0,003 seconds.
+    Sanitized in 0,004 seconds.
   frmParm_Pensionsafsavnstillæg
-    Sanitized in 0,003 seconds.
+    Sanitized in 0,005 seconds.
   frmParm_BeløbUdenKonti
-    Sanitized in 0,003 seconds.
+    Sanitized in 0,004 seconds.
   frmParm_PctUdenKonti
     Sanitized in 0,003 seconds.
   frmParm_BeløbPctMedKonti
@@ -410,9 +413,9 @@ Exporting forms...
   frmAfdeling
     Sanitized in 0,010 seconds.
   frmTmpFB
-    Sanitized in 0,075 seconds.
+    Sanitized in 0,079 seconds.
   frmSUF_TilbudsSkabelon_NoegleTal
-    Sanitized in 0,017 seconds.
+    Sanitized in 0,018 seconds.
   frmSUF_TilbudsSkabelon_Total
     Sanitized in 0,006 seconds.
   frmParm_UnicontaFirmaID
@@ -428,41 +431,41 @@ Exporting forms...
   frmParm_FB_Excel_Path
     Sanitized in 0,003 seconds.
   frmSUF_IB_Til_Uniconta
-    Sanitized in 0,006 seconds.
+    Sanitized in 0,007 seconds.
   frmTmpAfdDebitorBudgetNew
-    Sanitized in 0,011 seconds.
+    Sanitized in 0,012 seconds.
   frmParm_Prisberegning
-    Sanitized in 0,002 seconds.
+    Sanitized in 0,003 seconds.
   frmPrisberegning
     Sanitized in 0,007 seconds.
   frmSUF_OpretNytBudgetår
     Sanitized in 0,007 seconds.
   frmTmpMedarbVikar
-    Sanitized in 0,006 seconds.
+    Sanitized in 0,005 seconds.
   frmVælgKildeAfdeling
     Sanitized in 0,002 seconds.
   frmTmpMedarbVikarSub
     Sanitized in 0,003 seconds.
   frmPrisberegningOpret
-    Sanitized in 0,007 seconds.
+    Sanitized in 0,006 seconds.
   frmPrisberegning_subform
-    Sanitized in 0,007 seconds.
+    Sanitized in 0,005 seconds.
   frmSub_DynamicTable
-    Sanitized in 0,002 seconds.
+    Sanitized in 0,001 seconds.
   frmIconGallery
-    Sanitized in 0,004 seconds.
+    Sanitized in 0,003 seconds.
   frmSUF_FB_Real
-    Sanitized in 0,013 seconds.
+    Sanitized in 0,009 seconds.
   frmSUF_UdskrivAfdFinansData
     Sanitized in 0,003 seconds.
   frmSUF_OpdaterFinPostUniconta
     Sanitized in 0,004 seconds.
   frmSUF_DebtorImpFeltOversigt
-    Sanitized in 0,005 seconds.
+    Sanitized in 0,004 seconds.
   frmSUF_ImpFromVisma
     Sanitized in 0,003 seconds.
   frmSUF_Koncernbudget
-    Sanitized in 0,011 seconds.
+    Sanitized in 0,013 seconds.
   frmOverfoerselMonitor
     Sanitized in 0,004 seconds.
 [57]
@@ -471,7 +474,7 @@ Exporting macros...
   mcrOpenFrm_SUF_CreateNewBudgetYear
     Sanitized in 0,000 seconds.
   mcrOpenFrm_AfdDebitorBudget
-    Sanitized in 0,001 seconds.
+    Sanitized in 0,000 seconds.
   mcrOpenFrm_SUF_InterntBudget
     Sanitized in 0,000 seconds.
   mcrOpenFrm_SUF_ChoseBudgetYear
@@ -512,7 +515,7 @@ Exporting macros...
 -------------------------------------
 Exporting reports...          
   tblInterntBudget
-    Sanitized in 0,007 seconds.
+    Sanitized in 0,006 seconds.
 [1]
 -------------------------------------
 Exporting table data...       
@@ -535,84 +538,86 @@ ERROR: Error accessing Hidden Attribute for frm_TmpDebitorBudgetNew.
 Error 2950: Reserved Error Source: clsDbHiddenAttribute.GetDictionary
 -------------------------------------
 [1]
+Added default .gitignore file
+Added default .gitattributes file
 -------------------------------------
-Done. (7,68 seconds)
+Done. (13,39 seconds)
 
 --------------------------------------------------
                 PERFORMANCE REPORTS
 --------------------------------------------------
 Category                      Count     Seconds
 --------------------------------------------------
-Forms                         57        2,60
-Queries                       51        1,43
-Modules                       33        1,11
-Tables                        66        0,98
-IMEX Specs                    8         0,26
-Macros                        20        0,22
-Hidden Attributes             1         0,11
-DB Properties                 56        0,11
+Forms                         57        8,45
+Queries                       51        1,47
+Tables                        66        0,94
+Modules                       33        0,89
+IMEX Specs                    8         0,27
+Macros                        20        0,16
+DB Properties                 56        0,16
 Doc Properties                2         0,11
-DB Connections                1         0,08
-Shared Images                 3         0,08
+Hidden Attributes             1         0,11
+DB Connections                1         0,09
+Shared Images                 3         0,07
 Saved Specs                   4         0,06
-VBE References                14        0,05
 Reports                       1         0,05
+VBE References                14        0,04
 Nav Pane Groups               2         0,04
 Themes                        1         0,03
 Table Data                    1         0,03
-Project                       1         0,02
+Proj Properties               2         0,03
 VB Project                    1         0,02
+Project                       1         0,02
+CommandBars                   0         0,02
 Table Data Macros             0         0,01
-Proj Properties               0         0,00
 Relations                     0         0,00
-CommandBars                   0         0,00
 VBE Forms                     0         0,00
 --------------------------------------------------
-TOTALS:                       323       7,42
+TOTALS:                       325       13,06
 --------------------------------------------------
 
 --------------------------------------------------
 Operations                    Count     Seconds
 --------------------------------------------------
-Read File Bytes               174       1,60
-App.SaveAsText()              129       0,95
-Increment Progress            864       0,65
+Read File Bytes               174       1,44
+App.SaveAsText()              129       0,92
+Increment Progress            866       0,71
 Sanitize File                 129       0,60
-Convert to JSON               3479      0,49
-Read File                     174       0,38
-Get File Property Hash        504       0,32
-Format SQL                    51        0,26
-Scan DB Objects               1         0,26
-Clear Orphaned Files          20        0,18
-Console Updates               9         0,18
-Write File                    361       0,13
-Export VBE Module             33        0,12
-Clear Files by Ext            6         0,10
+Convert to JSON               3488      0,50
+Get File Property Hash        505       0,32
+Read File                     174       0,32
+Scan DB Objects               1         0,30
+Format SQL                    51        0,28
+Clear Orphaned Files          20        0,19
+Console Updates               10        0,18
+Write File                    362       0,13
+Export VBE Module             33        0,11
+Clear Files by Ext            6         0,11
 App.ExportXML()               11        0,10
 Delete File                   305       0,10
-Get Modified Date             544       0,07
+Get Modified Date             545       0,06
 Read File DevMode             58        0,06
-modFileAccess.VerifyPath      505       0,06
+modFileAccess.VerifyPath      506       0,06
 Save Query SQL                51        0,05
 Get VBA Hash                  91        0,05
-Compute SHA256                913       0,05
+Compute SHA256                915       0,05
 Check for linked table        66        0,04
-Save Table SQL                11        0,04
+Save Table SQL                11        0,03
 Parse JSON                    1         0,03
-Sanitize VBA Code             80        0,02
+Sanitize VBA Code             80        0,03
 Sanitize XML                  11        0,01
+Quick Count Files             1         0,01
 Format XML (alt)              4         0,01
 Write Binary File             3         0,01
-Quick Count Files             1         0,01
-Parse JSON ISO Date           254       0,00
+Parse JSON ISO Date           254       0,01
 Format XML                    7         0,00
-modFileAccess.GetUncPath      116       0,00
 Export Table Data as TDF      1         0,00
-Close Open Objects            1         0,00
 Quick Count Objects           1         0,00
+modFileAccess.GetUncPath      116       0,00
+Close Open Objects            1         0,00
 Export Theme                  1         0,00
 --------------------------------------------------
-Other Operations                        0,75
+Other Operations                        6,56
 --------------------------------------------------
 
 

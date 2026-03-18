@@ -30,8 +30,8 @@ Private Sub btnOpretAfd_Click()
     Dim strAfd As String
     Dim intYear As Integer
 
-    strAfd = Nz(Me.cboAfdeling.value, "")
-    intYear = Nz(Me.cboYear.value, 0)
+    strAfd = Nz(Me.cboAfdeling.Value, "")
+    intYear = Nz(Me.cboYear.Value, 0)
 
     If Len(strAfd) = 0 Or intYear = 0 Then
         MsgBox "Indtast Afdeling, År og Revision"
@@ -41,6 +41,23 @@ Private Sub btnOpretAfd_Click()
     If Nz(ELookup("Year_", "tblFBBudget", "Year_ = " & intYear), -1) = -1 Then
         MsgBox "Fællesbidrag er ikke beregnet for dette år: " & intYear
         Exit Sub
+    End If
+
+    ' Hvis åbnet fra Prisberegning: oversæt PrisberegningNavn → AfdNr Uniconta
+    ' PrisberegningNavn = tblAfdeling.Afdeling = tblAfdeling.[AfdNr Uniconta]
+    ' fncInitTilbud og alle underfunktioner forventer [AfdNr Uniconta] formatet
+    If Nz(TempVars("tsFromPrisberegning").Value, False) = True Then
+        Dim strAfdUniconta As String
+        strAfdUniconta = Nz(ELookup("[AfdNr Uniconta]", "tblAfdeling", _
+                            "Afdeling = '" & strAfd & "' AND Year_ = " & intYear), "")
+
+        If strAfdUniconta = "" Then
+            MsgBox "Kunne ikke finde afdelingen '" & strAfd & "' i tblAfdeling." & vbCrLf & _
+                   "Kontrollér at prisberegningsnavnet svarer til en afdeling.", vbExclamation
+            Exit Sub
+        End If
+
+        strAfd = strAfdUniconta
     End If
 
     Call fncInitTilbud(strAfd, intYear)

@@ -1,0 +1,750 @@
+﻿{
+  "Info": {
+    "Class": "clsDbImexSpec",
+    "Description": "Import/Export Specification from MSysIMEXSpecs"
+  },
+  "Items": {
+    "DateDelim": "-",
+    "DateFourDigitYear": true,
+    "DateLeadingZeros": true,
+    "DateOrder": 0,
+    "DecimalPoint": ",",
+    "FieldSeparator": ";",
+    "FileType": 1252,
+    "SpecName": "DebtorClientUser Importspecifikation",
+    "SpecType": 1,
+    "StartRow": 1,
+    "TextDelim": "\"",
+    "TimeDelim": ":",
+    "Columns": {
+      "Adresse 1": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 158,
+        "Width": 36
+      },
+      "Adresse 2": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 194,
+        "Width": 20
+      },
+      "Adresse 3": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 214,
+        "Width": 10
+      },
+      "Afdeling": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1146,
+        "Width": 9
+      },
+      "Bankkonto": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 913,
+        "Width": 10
+      },
+      "Betaling": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 459,
+        "Width": 9
+      },
+      "Betalingsformat": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 585,
+        "Width": 16
+      },
+      "Betalingsgebyr": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 990,
+        "Width": 15
+      },
+      "Blokeret": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 601,
+        "Width": 9
+      },
+      "Bynavn": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 224,
+        "Width": 12
+      },
+      "Bærer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1155,
+        "Width": 6
+      },
+      "CountryName": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 255,
+        "Width": 12
+      },
+      "CRM-gruppe": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 799,
+        "Width": 11
+      },
+      "CVR-nr": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 267,
+        "Width": 7
+      },
+      "e-faktura": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 831,
+        "Width": 10
+      },
+      "E-mail til Faktura": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 660,
+        "Width": 19
+      },
+      "E-mail til Kontaktperson": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 635,
+        "Width": 25
+      },
+      "EORI": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1130,
+        "Width": 5
+      },
+      "Faktura oplysninger": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 32,
+        "Width": 28
+      },
+      "Fakturakonto": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 285,
+        "Width": 13
+      },
+      "Fast-tekst": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1135,
+        "Width": 11
+      },
+      "FIK Kode": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 873,
+        "Width": 30
+      },
+      "Forfalden": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 705,
+        "Width": 10
+      },
+      "Forfalden i valuta": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 730,
+        "Width": 19
+      },
+      "Formål": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1161,
+        "Width": 7
+      },
+      "Forsendelse": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 841,
+        "Width": 12
+      },
+      "GLN-nummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 761,
+        "Width": 16
+      },
+      "Gruppe": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 113,
+        "Width": 7
+      },
+      "Husleje": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 72,
+        "Width": 8
+      },
+      "Interesser": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 810,
+        "Width": 11
+      },
+      "Kontaktperson": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 679,
+        "Width": 19
+      },
+      "Konto": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 2,
+        "SkipColumn": false,
+        "Start": 120,
+        "Width": 13
+      },
+      "Kontonavn": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 133,
+        "Width": 25
+      },
+      "Kontotype": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 903,
+        "Width": 10
+      },
+      "Kreditmaks": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 480,
+        "Width": 11
+      },
+      "Kreditor": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1108,
+        "Width": 9
+      },
+      "Kreditors reference": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1037,
+        "Width": 20
+      },
+      "Land": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 247,
+        "Width": 8
+      },
+      "Layoutgruppe": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 556,
+        "Width": 13
+      },
+      "Leveringsadresse 1": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 312,
+        "Width": 19
+      },
+      "Leveringsadresse 2": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 331,
+        "Width": 19
+      },
+      "Leveringsadresse 3": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 350,
+        "Width": 19
+      },
+      "Leveringsbetingelse": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 853,
+        "Width": 20
+      },
+      "Leveringsby": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 389,
+        "Width": 12
+      },
+      "Leverings-id": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 446,
+        "Width": 13
+      },
+      "Leveringsland": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 401,
+        "Width": 14
+      },
+      "Leveringslandenavn": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 415,
+        "Width": 19
+      },
+      "Leveringsnavn": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 298,
+        "Width": 14
+      },
+      "Leveringspostnummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 369,
+        "Width": 20
+      },
+      "Linjerabat %": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1117,
+        "Width": 13
+      },
+      "Medarbejder": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 749,
+        "Width": 12
+      },
+      "Mobiltelefon": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 923,
+        "Width": 20
+      },
+      "Moms": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 500,
+        "Width": 5
+      },
+      "Moms operation": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 505,
+        "Width": 15
+      },
+      "Momszone": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 491,
+        "Width": 9
+      },
+      "Nets opkrævning": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 610,
+        "Width": 16
+      },
+      "Notater": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1005,
+        "Width": 8
+      },
+      "Omsætningskonto": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 569,
+        "Width": 16
+      },
+      "Opgørelse": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1027,
+        "Width": 10
+      },
+      "Oprettet": {
+        "Attributes": 0,
+        "DataType": 8,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1097,
+        "Width": 11
+      },
+      "OrdreNummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 101,
+        "Width": 12
+      },
+      "Paragraf": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 23,
+        "Width": 9
+      },
+      "Personnr": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 14,
+        "Width": 9
+      },
+      "Postnummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 236,
+        "Width": 11
+      },
+      "Priser inklusive moms": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 777,
+        "Width": 22
+      },
+      "Prisliste": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 530,
+        "Width": 10
+      },
+      "Produkter": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 821,
+        "Width": 10
+      },
+      "Saldo": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 698,
+        "Width": 7
+      },
+      "Saldo i valuta": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 715,
+        "Width": 15
+      },
+      "Saldometode": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1085,
+        "Width": 12
+      },
+      "Salgspris": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 520,
+        "Width": 10
+      },
+      "Send e-mail": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1073,
+        "Width": 12
+      },
+      "SE-nummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 976,
+        "Width": 10
+      },
+      "Sidste faktura": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 961,
+        "Width": 15
+      },
+      "Slutrabat %": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 468,
+        "Width": 12
+      },
+      "Sprog": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 626,
+        "Width": 9
+      },
+      "Sprogkode": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1057,
+        "Width": 10
+      },
+      "Status": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 7,
+        "Width": 7
+      },
+      "Status Dato": {
+        "Attributes": 0,
+        "DataType": 8,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 60,
+        "Width": 12
+      },
+      "SUF Veteran": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1168,
+        "Width": 12
+      },
+      "SWIFT": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1067,
+        "Width": 6
+      },
+      "Takst": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1,
+        "Width": 6
+      },
+      "Telefon": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 434,
+        "Width": 12
+      },
+      "Uddannelse": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1180,
+        "Width": 11
+      },
+      "Underhold": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 80,
+        "Width": 10
+      },
+      "Valutakode": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 274,
+        "Width": 11
+      },
+      "Varenavnegruppe": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 540,
+        "Width": 16
+      },
+      "Vedhæftet fil": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1013,
+        "Width": 14
+      },
+      "Vores kontonummer": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 943,
+        "Width": 18
+      },
+      "WWW": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 986,
+        "Width": 4
+      },
+      "Xtra takst": {
+        "Attributes": 0,
+        "DataType": 5,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 90,
+        "Width": 11
+      }
+    }
+  }
+}

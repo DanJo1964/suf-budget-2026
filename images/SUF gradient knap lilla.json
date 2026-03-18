@@ -1,0 +1,12 @@
+﻿{
+  "Info": {
+    "Class": "clsDbSharedImage",
+    "Description": "Shared Image Gallery Item"
+  },
+  "Items": {
+    "Name": "SUF gradient knap lilla",
+    "FileName": "SUF gradient knap lilla.png",
+    "Extension": "png",
+    "ContentHash": "51fa45d"
+  }
+}

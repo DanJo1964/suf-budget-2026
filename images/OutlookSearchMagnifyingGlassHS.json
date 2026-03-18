@@ -1,0 +1,12 @@
+﻿{
+  "Info": {
+    "Class": "clsDbSharedImage",
+    "Description": "Shared Image Gallery Item"
+  },
+  "Items": {
+    "Name": "OutlookSearchMagnifyingGlassHS",
+    "FileName": "Ressource.png",
+    "Extension": "png",
+    "ContentHash": "0d7921f"
+  }
+}

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [_Konteringsvejledning] (
+  [ID] AUTOINCREMENT CONSTRAINT [ID] PRIMARY KEY UNIQUE NOT NULL,
+  [Navn] VARCHAR (255),
+  [Beskrivelse] VARCHAR (255),
+  [Konto] DOUBLE
+)

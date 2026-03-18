@@ -1,0 +1,62 @@
+﻿{
+  "Info": {
+    "Class": "clsDbImexSpec",
+    "Description": "Import/Export Specification from MSysIMEXSpecs"
+  },
+  "Items": {
+    "DateDelim": "-",
+    "DateFourDigitYear": false,
+    "DateLeadingZeros": false,
+    "DateOrder": 0,
+    "DecimalPoint": "",
+    "FieldSeparator": "\u0001",
+    "FileType": 0,
+    "SpecName": "1",
+    "SpecType": 0,
+    "StartRow": 1,
+    "TextDelim": "\u0002",
+    "TimeDelim": ":",
+    "Columns": {
+      "Afdeling": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 41,
+        "Width": 9
+      },
+      "Beløb": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 30,
+        "Width": 11
+      },
+      "Dato": {
+        "Attributes": 0,
+        "DataType": 8,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 13,
+        "Width": 11
+      },
+      "Entydigt id": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 2,
+        "SkipColumn": false,
+        "Start": 1,
+        "Width": 12
+      },
+      "Konto": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 24,
+        "Width": 6
+      }
+    }
+  }
+}

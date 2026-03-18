@@ -1,0 +1,94 @@
+﻿{
+  "Info": {
+    "Class": "clsDbImexSpec",
+    "Description": "Import/Export Specification from MSysIMEXSpecs"
+  },
+  "Items": {
+    "DateDelim": "-",
+    "DateFourDigitYear": true,
+    "DateLeadingZeros": false,
+    "DateOrder": 0,
+    "DecimalPoint": ",",
+    "FieldSeparator": "\u0001",
+    "FileType": 1252,
+    "SpecName": "Export_af_tblParm_ProcentSatser Import Specification",
+    "SpecType": 1,
+    "StartRow": 1,
+    "TextDelim": "\u0002",
+    "TimeDelim": ":",
+    "Columns": {
+      "Beløb": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 1,
+        "Width": 11
+      },
+      "BudgetYear": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 12,
+        "Width": 8
+      },
+      "DateModified": {
+        "Attributes": 0,
+        "DataType": 8,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 20,
+        "Width": 48
+      },
+      "Kommentar": {
+        "Attributes": 0,
+        "DataType": 12,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 68,
+        "Width": 32000
+      },
+      "Konto": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 81,
+        "Width": 17
+      },
+      "Navn": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 98,
+        "Width": 48
+      },
+      "Procent": {
+        "Attributes": 0,
+        "DataType": 7,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 146,
+        "Width": 1
+      },
+      "Status": {
+        "Attributes": 0,
+        "DataType": 4,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 185,
+        "Width": 1
+      },
+      "UserModified": {
+        "Attributes": 0,
+        "DataType": 10,
+        "IndexType": 0,
+        "SkipColumn": false,
+        "Start": 186,
+        "Width": 3
+      }
+    }
+  }
+}

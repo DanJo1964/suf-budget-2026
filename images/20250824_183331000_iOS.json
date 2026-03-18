@@ -1,0 +1,12 @@
+﻿{
+  "Info": {
+    "Class": "clsDbSharedImage",
+    "Description": "Shared Image Gallery Item"
+  },
+  "Items": {
+    "Name": "20250824_183331000_iOS",
+    "FileName": "20250824_183331000_iOS.png",
+    "Extension": "png",
+    "ContentHash": "0169c62"
+  }
+}

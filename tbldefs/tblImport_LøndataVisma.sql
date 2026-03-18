@@ -1,0 +1,22 @@
+﻿CREATE TABLE [tblImport_LøndataVisma] (
+  [Arbejdsgiver] DOUBLE,
+  [Medarbejdernummer] DOUBLE,
+  [Ansættelsesdato] DATETIME,
+  [Fornavn] VARCHAR (255),
+  [Efternavn] VARCHAR (255),
+  [Status] VARCHAR (255),
+  [Fra] DATETIME,
+  [Til] VARCHAR (255),
+  [Ansattype] VARCHAR (255),
+  [Ekstern titel] VARCHAR (255),
+  [CostCenter] VARCHAR (255),
+  [Arbejdstid timer] DOUBLE,
+  [Løntrin] VARCHAR (255),
+  [Valgfri1] VARCHAR (255),
+  [Valgfri2] VARCHAR (255),
+  [Valgfri3] VARCHAR (255),
+  [Lønartsnummer] DOUBLE,
+  [Egen tekst] VARCHAR (255),
+  [Beløb] VARCHAR (255),
+  [Rammetrin beløb] VARCHAR (255)
+)

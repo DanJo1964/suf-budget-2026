@@ -1,0 +1,12 @@
+﻿{
+  "Info": {
+    "Class": "clsDbTableDef",
+    "Description": "Linked Table"
+  },
+  "Items": {
+    "Name": "tblHovedbudgetAfdeling",
+    "Connect": "ODBC;DRIVER=ODBC Driver 18 for SQL Server;SERVER=192.168.1.9\\SQLEXPRESS;APP=Microsoft Office;DATABASE=Budget_Prisberegning;Encrypt=no;TrustServerCertificate=yes;",
+    "SourceTableName": "dbo.tblHovedbudgetAfdeling",
+    "Attributes": 536870912
+  }
+}

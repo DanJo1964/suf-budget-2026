@@ -1,0 +1,9 @@
+﻿SELECT
+  tblAfdeling.Afdeling,
+  tblAfdeling.AfdelingsNavn,
+  tblAfdeling.Adresse,
+  tblAfdeling.PostBy,
+  tblAfdeling.Afdelingsleder,
+  tblAfdeling.Tlf_Mail
+FROM
+  tblAfdeling;

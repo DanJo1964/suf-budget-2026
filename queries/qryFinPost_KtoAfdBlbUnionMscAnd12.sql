@@ -1,0 +1,9 @@
+﻿SELECT
+  *
+FROM
+  qryFinPost_ktoAfdBlbFrq12
+UNION
+SELECT
+  *
+FROM
+  qryFinPost_ktoAfdBlbFrqMsc;

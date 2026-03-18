@@ -2,6 +2,9 @@
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+
+' See "frmPrisberegning.cls"
+
 Option Compare Database
 Option Explicit
 
@@ -228,4 +231,32 @@ Private Sub btnOpretNyPrisberegning_Click()
 
 Fejl:
     MsgBox "Fejl i opret ny prisberegning: " & Err.Description, vbCritical
+End Sub
+
+'============================================================
+'  TILBUDSSKABELON – ÅBNER FORMEN MED VALGT PRISBEREGNING
+'============================================================
+Private Sub btnTilbudsskabelon_Click()
+    On Error GoTo Fejl
+
+    Dim lngPrisberegningID As Long
+    Dim strPrisberegningNavn As String
+    Dim intYear As Integer
+
+    lngPrisberegningID = Nz(Me.frmPrisberegning_subform.Form("ID").value, 0)
+    strPrisberegningNavn = Nz(Me.frmPrisberegning_subform.Form("PrisberegningNavn").value, "")
+    intYear = Nz(Me.cboBudgetår, 0)
+
+    If lngPrisberegningID = 0 Or intYear = 0 Then
+        MsgBox "Vælg en prisberegning og et budgetår først.", vbExclamation
+        Exit Sub
+    End If
+
+    ' Åbn TilbudsSkabelon og send PrisberegningID|Navn|År via OpenArgs
+    DoCmd.OpenForm "frmSUF_TilbudsSkabelon_Total", acNormal, , , acFormEdit, acDialog, _
+        lngPrisberegningID & "|" & strPrisberegningNavn & "|" & intYear
+
+    Exit Sub
+Fejl:
+    MsgBox "Fejl i Tilbudsskabelon: " & Err.Description, vbCritical
 End Sub

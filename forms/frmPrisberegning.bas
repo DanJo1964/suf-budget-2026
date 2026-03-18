@@ -16,10 +16,10 @@ Begin Form
     Width =15477
     DatasheetFontHeight =11
     ItemSuffix =387
-    Left =4005
-    Top =3030
-    Right =19485
-    Bottom =11700
+    Left =-24795
+    Top =1080
+    Right =-5460
+    Bottom =14745
     OnUnload ="[Event Procedure]"
     RecSrcDt = Begin
         0x2914ad7d715de640
@@ -239,7 +239,7 @@ Begin Form
                     Left =12990
                     Top =120
                     Width =1920
-                    Height =1470
+                    Height =795
                     TabIndex =4
                     Name ="btnOpretNyPrisberegning"
                     Caption ="Opret ny prisberegning"
@@ -250,8 +250,8 @@ Begin Form
                     LayoutCachedLeft =12990
                     LayoutCachedTop =120
                     LayoutCachedWidth =14910
-                    LayoutCachedHeight =1590
-                    LayoutGroup =5
+                    LayoutCachedHeight =915
+                    LayoutGroup =4
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0
@@ -347,14 +347,12 @@ Begin Form
                     Name ="btnRedigerBudget"
                     Caption ="Rediger budget"
                     OnClick ="[Event Procedure]"
-                    GroupTable =14
                     VerticalAnchor =1
 
                     LayoutCachedLeft =10725
                     LayoutCachedTop =1020
                     LayoutCachedWidth =12810
                     LayoutCachedHeight =1590
-                    LayoutGroup =3
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0
@@ -364,7 +362,33 @@ Begin Form
                     HoverColor =12219066
                     HoverThemeColorIndex =-1
                     HoverTint =100.0
-                    GroupTable =14
+                    Overlaps =1
+                End
+                Begin CommandButton
+                    OverlapFlags =85
+                    Left =12870
+                    Top =1020
+                    Width =2085
+                    Height =570
+                    TabIndex =12
+                    Name ="btnTilbudsskabelon"
+                    Caption ="Tilbudsskabelon"
+                    OnClick ="[Event Procedure]"
+                    VerticalAnchor =1
+
+                    LayoutCachedLeft =12870
+                    LayoutCachedTop =1020
+                    LayoutCachedWidth =14955
+                    LayoutCachedHeight =1590
+                    ForeThemeColorIndex =1
+                    ForeTint =100.0
+                    Gradient =0
+                    BackColor =7616884
+                    BackThemeColorIndex =-1
+                    BackTint =100.0
+                    HoverColor =12219066
+                    HoverThemeColorIndex =-1
+                    HoverTint =100.0
                     Overlaps =1
                 End
                 Begin CommandButton
@@ -384,7 +408,7 @@ Begin Form
                     LayoutCachedTop =1020
                     LayoutCachedWidth =8565
                     LayoutCachedHeight =1590
-                    LayoutGroup =4
+                    LayoutGroup =3
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0
@@ -562,7 +586,7 @@ Begin Form
                     LayoutCachedTop =1020
                     LayoutCachedWidth =10665
                     LayoutCachedHeight =1590
-                    LayoutGroup =6
+                    LayoutGroup =5
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0
@@ -591,7 +615,7 @@ Begin Form
                     LayoutCachedTop =1020
                     LayoutCachedWidth =5220
                     LayoutCachedHeight =1590
-                    LayoutGroup =7
+                    LayoutGroup =6
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0
@@ -620,7 +644,7 @@ Begin Form
                     LayoutCachedTop =1020
                     LayoutCachedWidth =6180
                     LayoutCachedHeight =1590
-                    LayoutGroup =8
+                    LayoutGroup =7
                     ForeThemeColorIndex =1
                     ForeTint =100.0
                     Gradient =0

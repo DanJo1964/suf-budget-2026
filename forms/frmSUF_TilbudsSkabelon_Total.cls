@@ -97,10 +97,13 @@ Private Sub Form_Load()
             Me.Label37.Caption = "Vælg prisberegning"
             Me.cboYear.Value = CInt(arrArgs(2))
 
-            ' Sæt RowSource til prisberegninger for det valgte år
+            ' Sæt RowSource til PrisberegningNavn fra tblPrisberegning
+            ' PrisberegningNavn = AfdU = Afdeling (samme værdi på tværs af tabeller)
             Dim strSQL As String
-            strSQL = "SELECT ID, PrisberegningNavn FROM tblPrisberegning " & _
+            strSQL = "SELECT PrisberegningNavn, PrisberegningNavn FROM tblPrisberegning " & _
                      "WHERE BudgetAar = " & arrArgs(2) & " ORDER BY PrisberegningNavn"
+            Me.cboAfdeling.ColumnCount = 2
+            Me.cboAfdeling.ColumnWidths = "0;5000"
             Me.cboAfdeling.RowSource = strSQL
             Me.cboAfdeling.Requery
             Me.cboAfdeling.Value = arrArgs(1)
@@ -118,14 +121,14 @@ Private Sub FilterYearAfd()
     Dim strFilter As String
 
     If Nz(TempVars("tsFromPrisberegning").Value, False) = True Then
-        ' ── Åbnet fra Prisberegning: filtrer på PrisberegningNavn ──
+        ' ── Åbnet fra Prisberegning: filtrer på AfdU (= PrisberegningNavn = Afdeling) ──
         Dim strNavn As String
         Dim intYear As Integer
         strNavn = Nz(TempVars("tsPrisberegningNavn").Value, "")
         intYear = Nz(TempVars("tsYear").Value, 0)
 
         If strNavn <> "" Then
-            strFilter = "[PrisberegningNavn] = '" & strNavn & "'"
+            strFilter = "[AfdU] = '" & strNavn & "'"
             If intYear > 0 Then
                 strFilter = strFilter & " AND [Year_] = " & intYear
             End If

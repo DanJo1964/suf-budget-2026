@@ -5,7 +5,7 @@ VCS Version 4.1.2
 Full Path: C:\Temp\SUF\Development\SUF_Budget_Dev_1.accdb
 Export Folder: C:\Temp\SUF\Development\github\suf-budget-2026\
 Using Fast Save
-18-03-2026 15:06:16
+18-03-2026 15:41:21
 -------------------------------------
 Scanning for changes...
 No modified db connections found in this database.
@@ -20,6 +20,7 @@ No modified commandbars found in this database.
 No modified shared images found in this database.
 No modified themes found in this database.
 No modified db properties found in this database.
+No modified imex specs found in this database.
 No modified queries found in this database.
 No modified macros found in this database.
 No modified reports found in this database.
@@ -33,10 +34,6 @@ ERROR: Error accessing Hidden Attribute for frm_TmpDebitorBudgetNew.
 Source: clsDbHiddenAttribute.GetDictionary
 -------------------------------------
 No modified hidden attributes found in this database.
--------------------------------------
-Exporting imex specs...       
-  DebtorClientUser Importspecifikation
-[1]
 -------------------------------------
 Exporting tables...           
   dbo_vwInterntBudget_SumByYearAfdKonto
@@ -97,82 +94,80 @@ Exporting tables...
 [55]
 -------------------------------------
 Exporting forms...            
-  frmPrisberegning
-    Sanitized in 0,007 seconds.
   frmSUF_TilbudsSkabelon_Total
-    Sanitized in 0,005 seconds.
-[2]
+    Sanitized in 0,008 seconds.
+[1]
 -------------------------------------
 Exporting table data...       
   USysRibbons
 [1]
 -------------------------------------
-Done. (1,97 seconds)
+Done. (6,68 seconds)
 
 --------------------------------------------------
                 PERFORMANCE REPORTS
 --------------------------------------------------
 Category                      Count     Seconds
 --------------------------------------------------
-Tables                        55        0,64
-Forms                         2         0,26
-IMEX Specs                    1         0,22
-Queries                       0         0,09
-Doc Properties                0         0,08
-Modules                       0         0,07
-DB Properties                 0         0,07
+Forms                         1         5,09
+Tables                        55        0,68
+IMEX Specs                    0         0,13
+Queries                       0         0,08
+Doc Properties                0         0,07
+DB Properties                 0         0,06
+Modules                       0         0,06
 Saved Specs                   0         0,06
 Hidden Attributes             0         0,06
-DB Connections                0         0,05
+DB Connections                0         0,04
 Table Data                    1         0,03
 Shared Images                 0         0,03
-Macros                        0         0,02
-VBE References                0         0,02
-Nav Pane Groups               0         0,02
 CommandBars                   0         0,02
+VBE References                0         0,02
+Macros                        0         0,02
+Nav Pane Groups               0         0,02
 Themes                        0         0,01
 Table Data Macros             0         0,01
 Proj Properties               0         0,01
-Project                       0         0,00
 VB Project                    0         0,00
+Project                       0         0,00
 Reports                       0         0,00
 Relations                     0         0,00
 VBE Forms                     0         0,00
 --------------------------------------------------
-TOTALS:                       59        1,78
+TOTALS:                       57        6,52
 --------------------------------------------------
 
 --------------------------------------------------
 Operations                    Count     Seconds
 --------------------------------------------------
-Convert to JSON               3191      0,38
+Convert to JSON               2503      0,32
 Clear Orphaned Files          20        0,31
-Scan DB Objects               1         0,28
-Increment Progress            476       0,21
-Console Updates               4         0,09
+Scan DB Objects               1         0,27
+Increment Progress            472       0,18
+Console Updates               5         0,10
 Check for linked table        132       0,08
-Get File Property Hash        116       0,06
-App.SaveAsText()              2         0,05
+Get File Property Hash        112       0,06
 Get VBA Hash                  91        0,04
 Parse JSON                    1         0,03
-Read File Bytes               2         0,03
-Get Modified Date             170       0,02
-Write File                    61        0,01
-Compute SHA256                296       0,01
-Sanitize File                 2         0,01
+Get Modified Date             169       0,02
+Write File                    58        0,02
+Read File Bytes               1         0,01
+Compute SHA256                289       0,01
 Quick Count Files             1         0,01
+Sanitize File                 1         0,01
+App.SaveAsText()              1         0,01
+modFileAccess.VerifyPath      59        0,01
 Parse JSON ISO Date           258       0,01
-modFileAccess.VerifyPath      63        0,01
-Export Table Data as TDF      1         0,01
+Export Table Data as TDF      1         0,00
 Quick Count Objects           1         0,00
-Delete File                   6         0,00
+Delete File                   4         0,00
 Close Open Objects            1         0,00
-Read File                     3         0,00
 modFileAccess.GetUncPath      116       0,00
-Read File DevMode             2         0,00
-Sanitize VBA Code             2         0,00
+Read File                     2         0,00
+Read File DevMode             1         0,00
+Sanitize VBA Code             1         0,00
 --------------------------------------------------
-Other Operations                        0,33
+Other Operations                        5,19
 --------------------------------------------------
 
 

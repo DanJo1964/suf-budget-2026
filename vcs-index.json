@@ -6,7 +6,7 @@
   "Items": {
     "MergeBuildDate": null,
     "FullBuildDate": null,
-    "ExportDate": "2026-03-18T14:06:18.000Z",
+    "ExportDate": "2026-03-18T14:41:27.000Z",
     "FullExportDate": "2026-03-18T10:07:48.000Z",
     "OptionsHash": "0b44941",
     "LastMergedCommit": "",
@@ -357,11 +357,12 @@
           "FilePropertiesHash": "5c7b16a"
         },
         "frmSUF_TilbudsSkabelon_Total.bas": {
-          "FileHash": "8bf573f",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "FileHash": "c3d24d4",
+          "ExportDate": "2026-03-18T14:41:27.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9531591",
-          "ImportDate": "2026-03-18T14:18:34.000Z"
+          "FilePropertiesHash": "046e1b0",
+          "ImportDate": "2026-03-18T14:18:34.000Z",
+          "OtherHash": "8bf573f"
         },
         "frmSUF_UdskrivAfdFinansData.bas": {
           "FileHash": "b20fb74",
@@ -1250,111 +1251,111 @@
         },
         "dbo_vwInterntBudget_SumByYearAfdKonto.json": {
           "FileHash": "e024c0f",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "f49d835"
+          "FilePropertiesHash": "afc6aa8"
         },
         "dbo_vwInterntBudget_SumByYearAfdKonto_Kto2990.json": {
           "FileHash": "676d9e9",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "168da6b"
+          "FilePropertiesHash": "d2d8d86"
         },
         "dbo_vwInterntBudget_SumByYearKonto.json": {
           "FileHash": "2dd337d",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "e6e61a3"
+          "FilePropertiesHash": "09a02a8"
         },
         "dbo_vwInterntBudget_SumByYearKonto_KtoTypeSum.json": {
           "FileHash": "4511c1a",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "168da6b"
+          "FilePropertiesHash": "d2d8d86"
         },
         "tblAfdeling.json": {
           "FileHash": "fa1e866",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "933bfb7"
+          "FilePropertiesHash": "2af069d"
         },
         "tblAfdelingRevision.json": {
           "FileHash": "b104264",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "37461a6"
+          "FilePropertiesHash": "1d4c5b6"
         },
         "tblCurrentFormParameters.json": {
           "FileHash": "cee38c8",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "f2966d5"
+          "FilePropertiesHash": "0b4bc3c"
         },
         "tblCurrentYearDepartment.json": {
           "FileHash": "81b306b",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "f2966d5"
+          "FilePropertiesHash": "0b4bc3c"
         },
         "tblDashboard.json": {
           "FileHash": "4d63608",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5f83328"
+          "FilePropertiesHash": "cec9291"
         },
         "tblDebtorClientUser.json": {
           "FileHash": "ebd68cb",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "37461a6"
+          "FilePropertiesHash": "1d4c5b6"
         },
         "tblDebtorImpFeltnavnOversigt.json": {
           "FileHash": "60b22f5",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "18a1342"
+          "FilePropertiesHash": "dd0ad9a"
         },
         "tblEkstraYdelser.json": {
           "FileHash": "9f744d6",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "ca8814b"
+          "FilePropertiesHash": "88905da"
         },
         "tblFB_Totaler.json": {
           "FileHash": "834e66d",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "70ba5e6"
+          "FilePropertiesHash": "a74e90d"
         },
         "tblFBBudget.json": {
           "FileHash": "40c90fe",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "933bfb7"
+          "FilePropertiesHash": "2af069d"
         },
         "tblFBNormtid.json": {
           "FileHash": "5b571ed",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5f83328"
+          "FilePropertiesHash": "cec9291"
         },
         "tblFBReal.json": {
           "FileHash": "618220f",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "54f8d07"
+          "FilePropertiesHash": "82813f5"
         },
         "tblFBRegKladde.json": {
           "FileHash": "c9e193c",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "37a40a4"
+          "FilePropertiesHash": "0e6b121"
         },
         "tblHovedbudgetAfdeling.json": {
           "FileHash": "3502c2e",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "89d87dc"
+          "FilePropertiesHash": "da75f51"
         },
         "tblImport_LøndataVisma.xml": {
           "FileHash": "9b5b0a0",
@@ -1364,226 +1365,226 @@
         },
         "tblInterntBudget.json": {
           "FileHash": "26fbb0d",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "ca8814b",
+          "FilePropertiesHash": "88905da",
           "ImportDate": "2026-03-18T13:41:25.000Z"
         },
         "tblInterntBudgetKtoDato.json": {
           "FileHash": "cdbbdd0",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "d0f1b69"
+          "FilePropertiesHash": "c4df094"
         },
         "tblKoncernnote.json": {
           "FileHash": "9ea3f58",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "37a40a4"
+          "FilePropertiesHash": "0e6b121"
         },
         "tblKontoPlan.json": {
           "FileHash": "db4e043",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5f83328"
+          "FilePropertiesHash": "cec9291"
         },
         "tblKontoPlan_Tilbudsskabelon.json": {
           "FileHash": "1de3379",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "ab8dbb4"
+          "FilePropertiesHash": "4c208d1"
         },
         "tblLønarter.json": {
           "FileHash": "7282caf",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5f83328"
+          "FilePropertiesHash": "cec9291"
         },
         "tblLøndataVisma.json": {
           "FileHash": "6917710",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "ca8814b"
+          "FilePropertiesHash": "88905da"
         },
         "tblLøntrin.json": {
           "FileHash": "23ad9eb",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "933bfb7"
+          "FilePropertiesHash": "2af069d"
         },
         "tblMedarbejder.json": {
           "FileHash": "818a3ce",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "37a40a4"
+          "FilePropertiesHash": "0e6b121"
         },
         "tblParm_BeløbPctMedKonti.json": {
           "FileHash": "d5e0719",
-          "ExportDate": "2026-03-18T14:06:17.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5372d24"
+          "FilePropertiesHash": "2df0e8b"
         },
         "tblParm_BeløbUdenKonti.json": {
           "FileHash": "5c34a41",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "c233c1f"
+          "FilePropertiesHash": "c4df094"
         },
         "tblParm_FB_Excel_Kti.json": {
           "FileHash": "f807483",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "55c26bd"
+          "FilePropertiesHash": "7e5a9f8"
         },
         "tblParm_FB_Excel_Path.json": {
           "FileHash": "26fbc3f",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9c59769"
+          "FilePropertiesHash": "a6254f4"
         },
         "tblParm_Koncernnote.json": {
           "FileHash": "511d4a1",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "44bf146"
+          "FilePropertiesHash": "1d4c5b6"
         },
         "tblParm_Konteringsvejledning.json": {
           "FileHash": "da95bff",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9a447f4"
+          "FilePropertiesHash": "4c208d1"
         },
         "tblParm_LønartKonto.json": {
           "FileHash": "35da82f",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "55c26bd"
+          "FilePropertiesHash": "7e5a9f8"
         },
         "tblParm_Løntrin.json": {
           "FileHash": "0139239",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "67314ef"
+          "FilePropertiesHash": "88905da"
         },
         "tblParm_LønVikarer.json": {
           "FileHash": "208a724",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "44bf146"
+          "FilePropertiesHash": "1d4c5b6"
         },
         "tblParm_ParagrafKonto.json": {
           "FileHash": "8848f3d",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9c59769"
+          "FilePropertiesHash": "a6254f4"
         },
         "tblParm_Pensionsafsavnstillæg.json": {
           "FileHash": "e0acab8",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "421f0ef"
+          "FilePropertiesHash": "853535b"
         },
         "tblParm_Prisberegning.json": {
           "FileHash": "42a076a",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9c59769"
+          "FilePropertiesHash": "a6254f4"
         },
         "tblParm_ProcentSatser.json": {
           "FileHash": "0420779",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9c59769"
+          "FilePropertiesHash": "a6254f4"
         },
         "tblParm_Timeløn.json": {
           "FileHash": "7fa22c9",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "67314ef"
+          "FilePropertiesHash": "88905da"
         },
         "tblParm_UdspecFællesbidrag.json": {
           "FileHash": "cb5a4e1",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "2c53444"
+          "FilePropertiesHash": "0f094e7"
         },
         "tblPrisberegning.json": {
           "FileHash": "0863c56",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "67314ef"
+          "FilePropertiesHash": "88905da"
         },
         "tblRegulering.json": {
           "FileHash": "c30b90d",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "183d793"
+          "FilePropertiesHash": "a74e90d"
         },
         "tblTilbudsSkabelon.json": {
           "FileHash": "bfb3e49",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "09d12e5"
+          "FilePropertiesHash": "dbfa3b4"
         },
         "tblTmpDebtor.json": {
           "FileHash": "1430f48",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "1ebcd29"
+          "FilePropertiesHash": "cec9291"
         },
         "tblTmpFB.json": {
           "FileHash": "c316fe3",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "0053ab9"
+          "FilePropertiesHash": "b2f88fd"
         },
         "tblTmpGLTrans.json": {
           "FileHash": "112b5c3",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "183d793"
+          "FilePropertiesHash": "a74e90d"
         },
         "tblTmpGLTransSum.json": {
           "FileHash": "9431781",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "67314ef"
+          "FilePropertiesHash": "88905da"
         },
         "tblTmpMedarbejder.json": {
           "FileHash": "b9b141d",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "50660f1"
+          "FilePropertiesHash": "d1296be"
         },
         "tblTmpMedarbVikar.json": {
           "FileHash": "2d21a47",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "50660f1"
+          "FilePropertiesHash": "d1296be"
         },
         "tblTmpOpretAfd.json": {
           "FileHash": "36e17fc",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "59926c6"
+          "FilePropertiesHash": "0e6b121"
         },
         "tblTmpOpretUnderAfd.json": {
           "FileHash": "18fa1ff",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9c59769"
+          "FilePropertiesHash": "a6254f4"
         },
         "tblTmpStamkortFB.json": {
           "FileHash": "d8f258c",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "67314ef"
+          "FilePropertiesHash": "88905da"
         },
         "tblUnicontaFirmaID.json": {
           "FileHash": "16bfc00",
-          "ExportDate": "2026-03-18T14:06:18.000Z",
+          "ExportDate": "2026-03-18T14:41:22.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "09d12e5"
+          "FilePropertiesHash": "dbfa3b4"
         },
         "tmpAfdeling_48928.xml": {
           "FileHash": "04f9c35",

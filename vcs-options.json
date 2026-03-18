@@ -4,7 +4,7 @@
     "AccessVersion": "16.0 64-bit"
   },
   "Options": {
-    "ExportFolder": "",
+    "ExportFolder": "C:\\Temp\\SUF\\Development\\github\\suf-budget-2026",
     "ShowDebug": false,
     "UseFastSave": true,
     "UseMergeBuild": false,

@@ -38,34 +38,44 @@
 - Forfatter af tekniske bøger
 - Ny virksomhed: www.pictoprompts.com
 
+## VIGTIG AFKLARING: Afdeling vs AfdNr Uniconta
+Felterne `Afdeling` og `[AfdNr Uniconta]` i tblAfdeling indeholder i dag den SAMME værdi.
+Historisk var der forskel (lønningssystem vs Uniconta), men det er rettet til.
+Ingen oversættelse nødvendig mellem de to felter.
+
 ## NÆSTE OPGAVE: PrisberegningNavn igennem Functions Tilbudsskabelon
-Status: IKKE LØST ENDNU
+Status: AFKLARET - KLAR TIL IMPLEMENTERING (23-03-2026)
 
-Når Tilbudsskabelonen åbnes fra Prisberegning, sendes PrisberegningNavn
-(f.eks. "BOAS NØRREBRO_v2") som strAfd til fncInitTilbud().
+### Afklaret dataflow:
+- tblAfdeling: Kender KUN rigtige afdelingsnavne (f.eks. "BOAS NØRREBRO")
+- tblFBBudget: Kolonnenavne er rigtige afdelingsnavne (f.eks. "BOAS NØRREBRO")
+- Alle andre tabeller (tblTmpDebtor, tblTmpMedarbejder, tblInterntBudget, tblTilbudsSkabelon):
+  Indeholder PrisberegningNavn (f.eks. "BOAS NØRREBRO_v2")
 
-I btnOpretAfd_Click oversættes PrisberegningNavn → AfdNr Uniconta inden
-kald til fncInitTilbud — MEN dette løser kun oprettelsen af selve
-tilbudsskabelon-posten. Det er ikke testet om oversættelsen er tilstrækkelig
-i alle tilfælde, eller om PrisberegningNavn skal slå igennem yderligere steder.
+### Løsning - tre ændringer:
 
-### Konkret problem der skal løses:
-Alle funktioner i modules/Functions Tilbudsskabelon.bas modtager strAfd
-og forventer AfdNr Uniconta formatet. Når der arbejdes med en prisberegning
-(som kan have et andet navn end afdelingen), skal det sikres at:
+#### A) btnTilbudsskabelon_Click i frmPrisberegning.cls
+Tilføj TempVars inden DoCmd.OpenForm:
+- TempVars("isFromPrisberegning") = True
+- TempVars("currentAfdeling") = Afdeling fra tblPrisberegning (den rigtige afd)
+- TempVars("currentPrisberegningNavn") = PrisberegningNavn
 
-1. fncStamdata    → WHERE [AfdNr Uniconta] = strAfd (tblAfdeling)
-2. fncIndtægter   → WHERE Afdeling = strAfd (tblTmpDebtor)
-3. fncPersonale   → WHERE Afdeling = strAfd (tblTmpMedarbejder + tblInterntBudget)
-                  → tblFBBudget kolonnenavn [strAfd]
-4. fncOmkostninger → WHERE i.Afdeling = strAfd (tblInterntBudget)
-5. fncNøgletal    → ELookup på tblInterntBudget med Afdeling = strAfd
-6. fncKoncernNote → WHERE AfdU = strAfd
-7. fncCleanUp     → WHERE [AfdU] = strAfd
+#### B) fncStamdata i Functions Tilbudsskabelon.bas
+1. Tjek TempVars("isFromPrisberegning") - hvis True, brug TempVars("currentAfdeling")
+   til WHERE-opslag i tblAfdeling i stedet for strAfd
+2. Sæt .Fields("AfdU") = strAfd (PrisberegningNavn) i stedet for rs![AfdNr Uniconta]
+   Så filtre i efterfølgende funktioner (der bruger AfdU = strAfd) virker korrekt
 
-### Spørgsmål der skal afklares i næste tråd:
-- Er data i tblTmpDebtor og tblTmpMedarbejder kopieret fra prisberegningen
-  (og derfor har PrisberegningNavn som Afdeling), eller fra det godkendte
-  budget (og derfor har AfdNr Uniconta)?
-- Skal resultatet gemmes med PrisberegningNavn eller AfdNr Uniconta som AfdU
-  i tblTilbudsSkabelon?
+#### C) fncPersonale i Functions Tilbudsskabelon.bas
+tblFBBudget bruger afdelingsnavne som kolonnenavne.
+Når kaldt fra Prisberegning, brug TempVars("currentAfdeling") som kolonnenavn
+i stedet for strAfd (som er PrisberegningNavn og ikke findes som kolonne).
+Berører: SQL-strengen (linje 544) og rs.Fields-opslag (linje 555, 557).
+
+### Funktioner der IKKE skal ændres:
+- fncIndtægter: OK - tblTmpDebtor har PrisberegningNavn
+- fncOmkostninger: OK - tblInterntBudget har PrisberegningNavn
+- fncNøgletal: OK - tblInterntBudget har PrisberegningNavn
+- fncKoncernNote: OK - tblInterntBudget har PrisberegningNavn
+- fncCleanUp: OK - tblTilbudsskabelon har PrisberegningNavn
+- CopyRecords: OK - kopierer fra trs som allerede har korrekt AfdU

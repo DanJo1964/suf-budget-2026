@@ -1,4 +1,4 @@
-Version =20
+﻿Version =20
 VersionRequired =20
 Begin Form
     PopUp = NotDefault
@@ -389,36 +389,6 @@ Begin Form
                     HoverColor =12219066
                     HoverThemeColorIndex =-1
                     HoverTint =100.0
-                    Overlaps =1
-                End
-                Begin CommandButton
-                    OverlapFlags =85
-                    Left =12870
-                    Top =1020
-                    Width =2085
-                    Height =570
-                    TabIndex =12
-                    Name ="btnTilbudsskabelon"
-                    Caption ="Tilbudsskabelon"
-                    OnClick ="[Event Procedure]"
-                    GroupTable =19
-                    VerticalAnchor =1
-
-                    LayoutCachedLeft =12870
-                    LayoutCachedTop =1020
-                    LayoutCachedWidth =14955
-                    LayoutCachedHeight =1590
-                    LayoutGroup =3
-                    ForeThemeColorIndex =1
-                    ForeTint =100.0
-                    Gradient =0
-                    BackColor =7616884
-                    BackThemeColorIndex =-1
-                    BackTint =100.0
-                    HoverColor =12219066
-                    HoverThemeColorIndex =-1
-                    HoverTint =100.0
-                    GroupTable =19
                     Overlaps =1
                 End
                 Begin CommandButton

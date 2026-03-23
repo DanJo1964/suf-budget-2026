@@ -169,7 +169,7 @@ Private Sub btnOpretNyPrisberegning_Click()
                     rs!OprettetDato = Now()
                     rs!OprettetAf = Environ("USERNAME")
                     rs!Status = "Ny"
-                    rs!Afdeling = strAfdUni
+                    rs!Afdeling = strGrundnavn
                     rs!BeregnType = 1
                 rs.Update
                 rs.Close

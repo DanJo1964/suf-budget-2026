@@ -160,6 +160,8 @@ Dim strLookupAfd As String
     Set rs = Nothing
     Set dB = Nothing
 
+Debug.Print "fncStamdata: strAfd=" & strAfd & " strLookupAfd=" & strLookupAfd & " trs.RecordCount=" & trs.RecordCount
+
 End Function
 Function fncIndtægter(strAfd As String, intYear As Integer)
 Dim rs As DAO.Recordset

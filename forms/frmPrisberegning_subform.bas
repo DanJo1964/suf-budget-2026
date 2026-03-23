@@ -18,10 +18,10 @@ Begin Form
     Width =10488
     DatasheetFontHeight =11
     ItemSuffix =20
-    Left =1035
-    Top =2250
-    Right =15705
-    Bottom =8550
+    Left =630
+    Top =2655
+    Right =15045
+    Bottom =8955
     BeforeDelConfirm ="[Event Procedure]"
     RecSrcDt = Begin
         0x1630a8c9347ce640
@@ -464,7 +464,7 @@ Begin Form
                     Left =8333
                     Top =4478
                     Height =315
-                    ColumnWidth =2055
+                    ColumnWidth =4125
                     TabIndex =11
                     Name ="Afdeling"
                     ControlSource ="Afdeling"

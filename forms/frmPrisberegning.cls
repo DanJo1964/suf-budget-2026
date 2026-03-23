@@ -244,13 +244,7 @@ Private Sub btnTilbudsskabelon_Click()
     Dim intYear As Integer
     Dim strPrisberegningAfd As String
 
-    strPrisberegningAfd = Nz(ELookup("Afdeling", "tblPrisberegning", _
-        "PrisberegningNavn = '" & strPrisberegningNavn & "'"), "")
-
-    TempVars("isFromPrisberegning").value = True
-    TempVars("currentAfdeling").value = strPrisberegningAfd
-    TempVars("currentPrisberegningNavn").value = strPrisberegningNavn
-
+    ' Hent værdier FØRST
     lngPrisberegningID = Nz(Me.frmPrisberegning_subform.Form("ID").value, 0)
     strPrisberegningNavn = Nz(Me.frmPrisberegning_subform.Form("PrisberegningNavn").value, "")
     intYear = Nz(Me.cboBudgetår, 0)
@@ -260,7 +254,23 @@ Private Sub btnTilbudsskabelon_Click()
         Exit Sub
     End If
 
-    ' Åbn TilbudsSkabelon og send PrisberegningID|Navn|År via OpenArgs
+    ' Tjek om der er indtægter (debitorer) for denne prisberegning
+    If Nz(DCount("*", "tblTmpDebtor", "Afdeling = '" & strPrisberegningNavn & "' AND Year_ = " & intYear), 0) = 0 Then
+        MsgBox "Der er ingen omsætning registreret for " & strPrisberegningNavn & "." & vbCrLf & vbCrLf & _
+               "Du skal oprette debitorer/indtægter i prisberegningen, før du kan generere tilbudsskabelonen.", _
+               vbExclamation, "Manglende omsætning"
+        Exit Sub
+    End If
+
+    ' Sæt TempVars EFTER variablerne har fået værdi
+    strPrisberegningAfd = Nz(ELookup("Afdeling", "tblPrisberegning", _
+        "PrisberegningNavn = '" & strPrisberegningNavn & "'"), "")
+
+    TempVars("isFromPrisberegning").value = True
+    TempVars("currentAfdeling").value = strPrisberegningAfd
+    TempVars("currentPrisberegningNavn").value = strPrisberegningNavn
+
+    ' Åbn TilbudsSkabelon
     DoCmd.OpenForm "frmSUF_TilbudsSkabelon_Total", acNormal, , , acFormEdit, acDialog, _
         lngPrisberegningID & "|" & strPrisberegningNavn & "|" & intYear
 

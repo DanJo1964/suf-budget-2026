@@ -6,7 +6,7 @@
   "Items": {
     "MergeBuildDate": null,
     "FullBuildDate": null,
-    "ExportDate": "2026-03-23T08:43:11.000Z",
+    "ExportDate": "2026-03-23T09:31:27.000Z",
     "FullExportDate": "2026-03-18T10:07:48.000Z",
     "OptionsHash": "0b44941",
     "LastMergedCommit": "",
@@ -181,19 +181,19 @@
           "FilePropertiesHash": "a894e19"
         },
         "frmPrisberegning.bas": {
-          "FileHash": "93a6cb3",
-          "ExportDate": "2026-03-23T08:40:48.000Z",
+          "FileHash": "97f350e",
+          "ExportDate": "2026-03-23T09:31:27.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "ba5df19",
+          "FilePropertiesHash": "be2a0cb",
           "ImportDate": "2026-03-18T12:47:23.000Z",
-          "OtherHash": "0bdaa94"
+          "OtherHash": "d5bc26e"
         },
         "frmPrisberegning_subform.bas": {
-          "FileHash": "ae3e4b4",
+          "FileHash": "8bb491f",
           "OtherHash": "acc6b59",
-          "ExportDate": "2026-03-18T10:05:54.000Z",
+          "ExportDate": "2026-03-23T09:31:27.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "5433ab2"
+          "FilePropertiesHash": "0d1a327"
         },
         "frmPrisberegningOpret.bas": {
           "FileHash": "5e25cfa",
@@ -357,10 +357,10 @@
           "FilePropertiesHash": "5c7b16a"
         },
         "frmSUF_TilbudsSkabelon_Total.bas": {
-          "FileHash": "c3d24d4",
-          "ExportDate": "2026-03-18T14:41:27.000Z",
+          "FileHash": "0764c49",
+          "ExportDate": "2026-03-23T09:31:27.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "046e1b0",
+          "FilePropertiesHash": "48f12ca",
           "ImportDate": "2026-03-18T14:18:34.000Z",
           "OtherHash": "8bf573f"
         },
@@ -764,11 +764,11 @@
           "FilePropertiesHash": "1a9aa90"
         },
         "Functions Tilbudsskabelon.bas": {
-          "FileHash": "7051562",
-          "OtherHash": "5fc2e31",
-          "ExportDate": "2026-03-18T10:05:44.000Z",
+          "FileHash": "0a74afe",
+          "OtherHash": "54ad50c",
+          "ExportDate": "2026-03-23T09:31:27.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9f541be"
+          "FilePropertiesHash": "ce7052a"
         },
         "Functions to test.bas": {
           "FileHash": "307217d",

@@ -13,10 +13,10 @@ Begin Form
     Width =20996
     DatasheetFontHeight =11
     ItemSuffix =27
-    Left =-24795
-    Top =1080
-    Right =-5460
-    Bottom =14745
+    Left =4005
+    Top =3030
+    Right =23340
+    Bottom =14895
     RecSrcDt = Begin
         0x4f11e14c1407e640
     End

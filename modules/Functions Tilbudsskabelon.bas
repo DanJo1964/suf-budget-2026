@@ -113,19 +113,26 @@ Function fncStamdata(strAfd As String, intYear As Integer)
 Dim rs As DAO.Recordset
 Dim dB As DAO.Database
 Dim str As String
+Dim strLookupAfd As String
+
+    ' Hvis kaldt fra Prisberegning, brug den rigtige afdeling til opslag i tblAfdeling
+    If Nz(TempVars("isFromPrisberegning"), False) = True Then
+        strLookupAfd = Nz(TempVars("currentAfdeling"), strAfd)
+    Else
+        strLookupAfd = strAfd
+    End If
 
     If strAfd = "999" Then
         str = "SELECT * FROM tblAfdeling"
     Else
-        str = "SELECT * FROM tblAfdeling WHERE [AfdNr Uniconta] = '" & strAfd & "' And Year_ = " & intYear
+        str = "SELECT * FROM tblAfdeling WHERE [AfdNr Uniconta] = '" & strLookupAfd & "' And Year_ = " & intYear
     End If
 
     Set dB = CurrentDb
     Set rs = dB.OpenRecordset(str, dbOpenDynaset, dbSeeChanges)
 
     With trs
-
-        If .State = 0 Then 'Check if the Recordset is closed
+        If .State = 0 Then
                 .CursorLocation = adUseClient
                 .CursorType = adOpenStatic
                 .LockType = adLockBatchOptimistic
@@ -134,9 +141,8 @@ Dim str As String
 
         If Not rs.EOF Then
             Do Until rs.EOF
-
                     .AddNew
-                    .Fields("AfdU").value = Nz(rs![AfdNr Uniconta], "")
+                    .Fields("AfdU").value = strAfd    ' <-- PrisberegningNavn, IKKE rs![AfdNr Uniconta]
                     .Fields("Year_").value = intYear
                     .Fields("A05").value = Nz(rs!AfdelingsNavn, "")
                     .Fields("A06").value = Nz(rs!Adresse, "")
@@ -144,19 +150,10 @@ Dim str As String
                     .Fields("A08").value = Nz(rs!Afdelingsleder, "")
                     .Fields("A09").value = Nz(rs!Tlf_Mail, "")
                     .Fields("E05").value = intYear
-
                     .Update
-
                 rs.MoveNext
             Loop
         End If
-
-'        .MoveFirst
-'        Do Until .EOF
-'            ''Debug.Print .Fields("AfdU").Value, .Fields("Year_").Value, .Fields("A05").Value, .Fields("A06").Value, .Fields("A07").Value, .Fields("A08").Value, .Fields("A09").Value
-'
-'            .MoveNext
-'        Loop
     End With
 
     rs.Close
@@ -540,8 +537,15 @@ Dim i As Integer
 
                         Dim dblFBårvLED As Double
                         Dim dblFBårvADM As Double
+                        Dim strFBAfd As String
 
-                        strSQL = "SELECT Konto_1, Year_, [" & strAfd & "] FROM tblFBBudget " & _
+                        If Nz(TempVars("isFromPrisberegning"), False) = True Then
+                            strFBAfd = Nz(TempVars("currentAfdeling"), strAfd)
+                        Else
+                            strFBAfd = strAfd
+                        End If
+
+                        strSQL = "SELECT Konto_1, Year_, [" & strFBAfd & "] FROM tblFBBudget " & _
                                  "WHERE Year_ = " & intYear & " " & _
                                  "AND (Konto_1 = 'LEDER' OR Konto_1 = 'ADM_TEKNIK')"
 
@@ -551,10 +555,10 @@ Dim i As Integer
                                 If Not .EOF Then
                                     Do Until .EOF
                                     Select Case !Konto_1
-                                        Case Is = "LEDER"
-                                            dblFBårvLED = rs.Fields(strAfd).value
-                                        Case Is = "ADM_TEKNIK"
-                                            dblFBårvADM = rs.Fields(strAfd).value
+                                            Case Is = "LEDER"
+                                                dblFBårvLED = rs.Fields(strFBAfd).value
+                                            Case Is = "ADM_TEKNIK"
+                                                dblFBårvADM = rs.Fields(strFBAfd).value
                                     End Select
                                     .MoveNext
                                     Loop

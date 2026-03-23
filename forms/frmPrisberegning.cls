@@ -242,6 +242,14 @@ Private Sub btnTilbudsskabelon_Click()
     Dim lngPrisberegningID As Long
     Dim strPrisberegningNavn As String
     Dim intYear As Integer
+    Dim strPrisberegningAfd As String
+
+    strPrisberegningAfd = Nz(ELookup("Afdeling", "tblPrisberegning", _
+        "PrisberegningNavn = '" & strPrisberegningNavn & "'"), "")
+
+    TempVars("isFromPrisberegning").value = True
+    TempVars("currentAfdeling").value = strPrisberegningAfd
+    TempVars("currentPrisberegningNavn").value = strPrisberegningNavn
 
     lngPrisberegningID = Nz(Me.frmPrisberegning_subform.Form("ID").value, 0)
     strPrisberegningNavn = Nz(Me.frmPrisberegning_subform.Form("PrisberegningNavn").value, "")

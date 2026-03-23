@@ -18,11 +18,14 @@ Begin Form
     Width =10488
     DatasheetFontHeight =11
     ItemSuffix =20
-    Left =630
-    Top =2055
-    Right =14070
-    Bottom =8355
+    Left =1035
+    Top =2250
+    Right =15705
+    Bottom =8550
     BeforeDelConfirm ="[Event Procedure]"
+    RecSrcDt = Begin
+        0x1630a8c9347ce640
+    End
     RecordSource ="SELECT tblPrisberegning.PrisberegningNavn, tblPrisberegning.Version, tblPrisbere"
         "gning.Beskrivelse, tblPrisberegning.AntalPladser, tblPrisberegning.OprettetDato,"
         " tblPrisberegning.Status, tblPrisberegning.SendtDato, tblPrisberegning.ID, tblPr"
@@ -121,7 +124,7 @@ Begin Form
                     Top =342
                     Width =7260
                     Height =600
-                    ColumnWidth =3000
+                    ColumnWidth =3900
                     Name ="PrisberegningNavn"
                     ControlSource ="PrisberegningNavn"
 

@@ -6,7 +6,7 @@
   "Items": {
     "MergeBuildDate": null,
     "FullBuildDate": null,
-    "ExportDate": "2026-03-23T09:31:27.000Z",
+    "ExportDate": "2026-03-23T09:40:05.000Z",
     "FullExportDate": "2026-03-18T10:07:48.000Z",
     "OptionsHash": "0b44941",
     "LastMergedCommit": "",
@@ -182,9 +182,9 @@
         },
         "frmPrisberegning.bas": {
           "FileHash": "97f350e",
-          "ExportDate": "2026-03-23T09:31:27.000Z",
+          "ExportDate": "2026-03-23T09:39:06.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "be2a0cb",
+          "FilePropertiesHash": "fbb4896",
           "ImportDate": "2026-03-18T12:47:23.000Z",
           "OtherHash": "d5bc26e"
         },

@@ -388,7 +388,7 @@ Function fncMedarbVikarBudget()
     Dim rs As ADODB.Recordset
     Dim strSQL As String
     Dim dblBeløb As Double
-    Dim cmd As ADODB.command
+    Dim cmd As ADODB.Command
     Dim i As Integer
     Dim strKto_ExtVikar As Double
     Dim strVikarTimerPrUge As String
@@ -473,7 +473,7 @@ Function fncBededagsTill() 'Store Bededagstillæg
     Dim strSQL As String
     Dim dblBedPct As Double
     Dim dblSum As Double
-    Dim cmd As ADODB.command
+    Dim cmd As ADODB.Command
     Dim i As Integer
 
     ' Initialize the ADO connection

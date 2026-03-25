@@ -728,6 +728,8 @@ Private Sub TransferToInterntBudget(strSumTable As String, intFortegn As Integer
         Loop
     End If
 
+'Debug.Print "dblSum_1100 beløb: " & dblSum_1100
+
     rsKtoSum.Close
     conn.Close
     Set rsKtoSum = Nothing

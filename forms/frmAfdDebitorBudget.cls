@@ -59,7 +59,7 @@ Private Sub btnFremskPct_Click()
     Dim yearVal As Long
 
     Dim conn As ADODB.Connection
-    Dim cmd As ADODB.command
+    Dim cmd As ADODB.Command
 
     Dim sqlText As String
 
@@ -126,7 +126,7 @@ Private Sub btnFremskPct_Click()
         "  AND t.Year_    = ? " & vbCrLf & _
         "  AND t.Takst <> 0;"
 
-    Set cmd = New ADODB.command
+    Set cmd = New ADODB.Command
     With cmd
         .ActiveConnection = conn
         .CommandType = adCmdText

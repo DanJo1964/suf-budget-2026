@@ -12,7 +12,7 @@ End Sub
 Public Sub InsertUnicontaToSQLPython(Filter_ As String, Year_ As Integer, Month_ As Integer, UnicontaID As String)
 Dim AccessPath As String
 Dim ExecutablePath As String
-Dim command As String
+Dim Command As String
 Dim ShellObj As Object
 
   ' Define variables for JSON values
@@ -99,7 +99,7 @@ Public Sub ImportVismaToNewTable(strMth As String, strYear As String)
     Dim strLocalFilePath As String
     Dim strFileName As String
     Dim conn As ADODB.Connection
-    Dim cmd As ADODB.command
+    Dim cmd As ADODB.Command
     Dim strPeriodeTil As String
 
     strPeriodeTil = Format(DateSerial(CInt(strYear), CInt(strMth) + 1, 0), "yyyymmdd")
@@ -129,7 +129,7 @@ Public Sub ImportVismaToNewTable(strMth As String, strYear As String)
 
     ' Delete existing records in tblTmpStamkortFB and insert new data
     Set conn = New ADODB.Connection
-    Set cmd = New ADODB.command
+    Set cmd = New ADODB.Command
 
     conn.ConnectionString = fncConnString ' Replace with your connection string function
     conn.Open

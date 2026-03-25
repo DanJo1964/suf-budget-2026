@@ -14,7 +14,7 @@ Begin Form
     Width =31680
     DatasheetFontHeight =11
     ItemSuffix =319
-    Left =4005
+    Left =4470
     Top =3030
     Right =23340
     Bottom =14895

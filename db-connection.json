@@ -4,8 +4,8 @@
     "Description": "Database connections used within the project used to prime Access' internal cache during import."
   },
   "Items": {
-    "ODBC;Driver=ODBC Driver 18 for SQL Server;SERVER=192.168.1.9\\SQLEXPRESS;DATABASE=Budget": {
-      "ODBC;DRIVER=ODBC Driver 18 for SQL Server;SERVER=192.168.1.9\\SQLEXPRESS;APP=Microsoft Office;DATABASE=Budget;Encrypt=no;TrustServerCertificate=yes;": "dbo_vwInterntBudget_SumByYearAfdKonto"
+    "ODBC;Driver=ODBC Driver 18 for SQL Server;SERVER=192.168.1.9\\SQLEXPRESS;DATABASE=Budget_Prisberegning": {
+      "ODBC;DRIVER=ODBC Driver 18 for SQL Server;SERVER=192.168.1.9\\SQLEXPRESS;APP=Microsoft Office;DATABASE=Budget_Prisberegning;Encrypt=no;TrustServerCertificate=yes;": "dbo_vwInterntBudget_SumByYearAfdKonto"
     }
   }
 }

@@ -5,7 +5,7 @@ VCS Version 4.1.2
 Full Path: C:\Temp\SUF\Development\SUF_Budget_Dev_1.accdb
 Export Folder: C:\Temp\SUF\Development\github\suf-budget-2026\
 Using Fast Save
-23-03-2026 11:31:49
+25-03-2026 15:32:42
 -------------------------------------
 Scanning for changes...
 No modified project found in this database.
@@ -28,7 +28,7 @@ No modified nav pane groups found in this database.
 
 -------------------------------------
 ERROR: Error accessing Hidden Attribute for frm_TmpDebitorBudgetNew.
-Error 2950: Reserved Error Source: clsDbHiddenAttribute.GetDictionary
+Source: clsDbHiddenAttribute.GetDictionary
 -------------------------------------
 No modified hidden attributes found in this database.
 -------------------------------------
@@ -37,8 +37,10 @@ Exporting db connections...
 [1]
 -------------------------------------
 Exporting modules...          
-  Functions Tilbudsskabelon
-[1]
+  Functions Wages
+  Functions FB Excel
+  Copy to new revision
+[3]
 -------------------------------------
 Exporting db properties...    
   Database Properties (DAO)
@@ -103,85 +105,87 @@ Exporting tables...
 [55]
 -------------------------------------
 Exporting forms...            
-  frmPrisberegning
-    Sanitized in 0,007 seconds.
-  frmPrisberegningOpret
-    Sanitized in 0,007 seconds.
-  frmPrisberegning_subform
-    Sanitized in 0,005 seconds.
-[3]
+  frmAfdDebitorBudget
+    Sanitized in 0,020 seconds.
+  frmTmpAfdMedarbejdBudget
+    Sanitized in 0,008 seconds.
+  frmSUF_InterntBudget
+    Sanitized in 0,014 seconds.
+  frmAfdMedarbBudget
+    Sanitized in 0,017 seconds.
+[4]
 -------------------------------------
 Exporting table data...       
   USysRibbons
 [1]
 -------------------------------------
-Done. (1,95 seconds)
+Done. (7,35 seconds)
 
 --------------------------------------------------
                 PERFORMANCE REPORTS
 --------------------------------------------------
 Category                      Count     Seconds
 --------------------------------------------------
-Tables                        55        0,69
-Forms                         3         0,29
+Forms                         4         5,54
+Tables                        55        0,63
+Modules                       3         0,22
 IMEX Specs                    0         0,13
 DB Properties                 56        0,12
-DB Connections                1         0,12
-Modules                       1         0,11
-Doc Properties                0         0,08
+DB Connections                1         0,11
 Queries                       0         0,08
+Doc Properties                0         0,08
+Hidden Attributes             0         0,05
 Saved Specs                   0         0,04
-Hidden Attributes             0         0,03
-Shared Images                 0         0,02
-Table Data                    1         0,02
+Shared Images                 0         0,03
+Table Data                    1         0,03
 VBE References                0         0,02
 Macros                        0         0,02
 Nav Pane Groups               0         0,02
+CommandBars                   0         0,02
 Themes                        0         0,01
 Table Data Macros             0         0,01
-Proj Properties               0         0,00
-Project                       0         0,00
+Proj Properties               0         0,01
 VB Project                    0         0,00
+Project                       0         0,00
 Reports                       0         0,00
 Relations                     0         0,00
 VBE Forms                     0         0,00
-CommandBars                   0         0,00
 --------------------------------------------------
-TOTALS:                       117       1,81
+TOTALS:                       120       7,18
 --------------------------------------------------
 
 --------------------------------------------------
 Operations                    Count     Seconds
 --------------------------------------------------
-Convert to JSON               2730      0,37
-Clear Orphaned Files          20        0,29
-Scan DB Objects               1         0,23
-Increment Progress            482       0,20
+Convert to JSON               2747      0,35
+Clear Orphaned Files          20        0,33
+Scan DB Objects               1         0,29
+Increment Progress            488       0,21
+Read File Bytes               7         0,13
+App.SaveAsText()              4         0,10
 Check for linked table        132       0,09
-Console Updates               4         0,07
-Get File Property Hash        122       0,07
-App.SaveAsText()              3         0,06
-Read File Bytes               4         0,06
-Get VBA Hash                  92        0,04
+Console Updates               5         0,07
+Get File Property Hash        128       0,07
+Sanitize File                 4         0,06
+Read File                     8         0,05
+Get VBA Hash                  95        0,05
 Parse JSON                    1         0,03
-Get Modified Date             175       0,02
-Sanitize File                 3         0,02
-Write File                    65        0,02
-Read File                     5         0,02
-Compute SHA256                307       0,01
-modFileAccess.VerifyPath      68        0,01
+Write File                    69        0,02
+Get Modified Date             181       0,02
+Quick Count Files             1         0,02
+Compute SHA256                320       0,01
+Export VBE Module             3         0,01
+modFileAccess.VerifyPath      73        0,01
+Sanitize VBA Code             7         0,01
 Parse JSON ISO Date           258       0,01
-Quick Count Files             1         0,01
-Export VBE Module             1         0,00
+Delete File                   13        0,01
+Read File DevMode             4         0,00
 Export Table Data as TDF      1         0,00
-Delete File                   9         0,00
-modFileAccess.GetUncPath      119       0,00
-Read File DevMode             3         0,00
-Sanitize VBA Code             4         0,00
 Quick Count Objects           1         0,00
+modFileAccess.GetUncPath      119       0,00
 Close Open Objects            1         0,00
 --------------------------------------------------
-Other Operations                        0,33
+Other Operations                        5,39
 --------------------------------------------------
 
 

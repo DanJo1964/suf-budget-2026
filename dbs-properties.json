@@ -41,7 +41,7 @@
       "Type": 10
     },
     "AppTitle": {
-      "Value": "DATABASE = DRIFT BUDGET",
+      "Value": "DATABASE = PRISBEREGNING",
       "Type": 10
     },
     "Auto Compact": {
@@ -113,7 +113,7 @@
       "Type": 4
     },
     "NavPane Width": {
-      "Value": 267,
+      "Value": 298,
       "Type": 4
     },
     "Never Cache": {

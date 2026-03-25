@@ -14,9 +14,9 @@ Begin Form
     Width =29197
     DatasheetFontHeight =11
     ItemSuffix =248
-    Left =-12165
+    Left =-12750
     Top =2970
-    Right =16365
+    Right =15780
     Bottom =14940
     Filter ="[Year_] = 2026 AND Afdeling = '60_ØSTERGADE'"
     Picture ="OutlookSearchMagnifyingGlassHS"

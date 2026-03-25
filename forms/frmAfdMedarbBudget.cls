@@ -252,6 +252,26 @@ Private Sub btnCreateLines_Click()
         qdfPT.Execute dbFailOnError Or dbSeeChanges
         Set qdfPT = Nothing
 
+        ' --- Kopiér også vikarlinjer fra tblTmpMedarbVikar ---
+        Dim qdfVikar As DAO.QueryDef
+        Dim strInsVikar As String
+
+        Set qdfVikar = dB.CreateQueryDef("")
+        qdfVikar.Connect = dB.TableDefs("tblTmpMedarbVikar").Connect
+        qdfVikar.ReturnsRecords = False
+
+        strInsVikar = _
+          "INSERT INTO tblTmpMedarbVikar " & _
+          "(Afdeling, Year_, Antal, Beløb, Løntrin) " & _
+          "SELECT '" & Replace(currentPrisberegningNavn, "'", "''") & "' AS Afdeling, " & _
+          "Year_, Antal, Beløb, Løntrin " & _
+          "FROM tblTmpMedarbVikar " & _
+          "WHERE Afdeling = '" & Replace(strAfd, "'", "''") & "' AND Year_ = " & CLng(currentYear) & ";"
+
+        qdfVikar.sql = strInsVikar
+        qdfVikar.Execute dbFailOnError Or dbSeeChanges
+        Set qdfVikar = Nothing
+
         Call FilterYearAfd
         Forms!frmAfdMedarbBudget!frm_UnderTmpAfdMedarbejdBudget.Form.Requery
         GoTo ExitSub
@@ -591,7 +611,9 @@ Private Function fncTotalPrg()
     Dim dblVikarTimerPrUge As Double
     Dim dblVikarTimerBeløbPrMd As Double
 
-    Call fncTempVarTilCurrent(TempVars("isFromPrisberegning"))
+    If Not IsNull(TempVars("isFromPrisberegning")) Then
+        Call fncTempVarTilCurrent(TempVars("isFromPrisberegning"))
+    End If
 
     intCntRest = 1
     For intCntRest = 1 To 7

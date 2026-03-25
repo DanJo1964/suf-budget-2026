@@ -178,7 +178,7 @@ End Sub
 
 Sub CallStoredProcedure()
     Dim conn As ADODB.Connection
-    Dim cmd As ADODB.command
+    Dim cmd As ADODB.Command
     Dim YearParam As ADODB.Parameter
     Dim DepartmentParam As ADODB.Parameter
     Dim VersionParam As ADODB.Parameter
@@ -188,7 +188,7 @@ Sub CallStoredProcedure()
     conn.Open fncConnString
 
     ' Create a new Command object
-    Set cmd = New ADODB.command
+    Set cmd = New ADODB.Command
     cmd.ActiveConnection = conn
     cmd.CommandType = adCmdStoredProc
     cmd.CommandText = "STP_CopyTblIB"

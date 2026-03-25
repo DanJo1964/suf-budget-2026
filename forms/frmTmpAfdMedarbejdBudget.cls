@@ -36,12 +36,6 @@ Private Sub Form_Load()
     End If
 
 End Sub
-
-Private Sub Form_Current()
-    ' Sikkerhedsline: hold beregnede felter konsistente ved recordskift (ingen prompts her)
-    RecalculateAll "Current"
-End Sub
-
 Private Sub Form_BeforeInsert(Cancel As Integer)
 
     If intYear = 0 Or strAfd = "" Then
@@ -60,20 +54,6 @@ Private Sub Form_BeforeInsert(Cancel As Integer)
     Me.Afdeling = strAfd
     Me.DatoFra = DateSerial(intYear, 1, 1)
     Me.DatoTil = DateSerial(intYear, 12, 31)
-
-'    Me.cboLøntrin = "LØN_A"
-'    Me.LøntrinBudget = "LØN_A"
-'
-'    Me.Normtid = C_OMREGN_16033
-'    Me.NormtidPrUge = Round(C_OMREGN_16033 * 12 / 52, 2)
-'
-'    Me.Beløb = Nz(ELookup("Beløb", "tblParm_Løntrin", "Konto='LØN_A'"), 0)
-'
-'    ' Styringsfelter (hvis de findes)
-'    If FieldExists("BeløbManuel") Then Me.BeløbManuel = 0
-'    If FieldExists("Tilfoej9900") Then Me.Tilfoej9900 = Null
-'
-'    RecalculateAll "BeforeInsert"
 
 End Sub
 
@@ -132,6 +112,9 @@ Private Sub NormtidPrUge_AfterUpdate()
 End Sub
 
 Private Sub DatoFra_AfterUpdate()
+    If Not IsNull(Me.DatoFra) Then
+        Me.DatoFra = DateSerial(Year(Me.DatoFra), Month(Me.DatoFra), 1)
+    End If
     RecalculateAll "DatoFra"
 End Sub
 
@@ -151,6 +134,11 @@ Private Sub BeløbBudget_AfterUpdate()
     If intSvar = vbYes Then
         RecalculateAll "BeløbBudget"
     ElseIf intSvar = vbNo Then
+
+        ' KRITISK: Gem posten så BeløbBudget persisteres i databasen
+        If Me.Dirty Then
+            Me.Dirty = False
+        End If
         CalcTotaler
     End If
 
@@ -323,7 +311,7 @@ Private Function CalcBeløbBudget_FromParams(ByVal strLontrinBudget As String, B
                 "Konto='" & strLontrinBudget & "' And BudgetYear=" & CStr(intYearOpslag)), 0) _
             / C_OMREGN_16033 * normtidMonth
 
-    ElseIf lonart = "1560" Or lonart = "1560" Then
+    ElseIf lonart = "1560" Or lonart = "1562" Then
         CalcBeløbBudget_FromParams = _
             Nz(ELookup("Beløb", "tblParm_BeløbUdenKonti", _
                 "Konto='LønRådighed' And BudgetYear=" & CStr(intYearOpslag)), 0) _

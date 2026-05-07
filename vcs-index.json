@@ -196,11 +196,11 @@
           "FilePropertiesHash": "9af34c9"
         },
         "frmPrisberegningOpret.bas": {
-          "FileHash": "98853da",
-          "OtherHash": "c05cb5c",
+          "FileHash": "f3d37a5",
           "ExportDate": "2026-03-23T10:31:51.000Z",
           "SourceModified": null,
-          "FilePropertiesHash": "9f67fd1"
+          "FilePropertiesHash": "b546081",
+          "ImportDate": "2026-05-07T12:37:14.000Z"
         },
         "frmRegulering.bas": {
           "FileHash": "1dd837e",

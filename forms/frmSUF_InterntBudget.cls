@@ -186,10 +186,6 @@ Private Sub btnLøn_Click()
     Dim intYearGrund As Integer
     Dim strAfd As String
     Dim strAfdUni As String
-    Dim dblOmsFiktiv As Double
-    Dim dblOG As Double
-    Dim dblMonthlyAmount As Double
-    Dim blnSuccess As Boolean
 
     intYear_ = Me.cboYearIntBud.value
     strAfdUni = Me.cboAfdelingUni
@@ -215,52 +211,6 @@ Private Sub btnLøn_Click()
         End If
     End If
 
-    Call fncUpdateSumKti(strAfdUni, intYear_)
-
-    ' Opdater konto 1040 hvis det er fra Prisberegning
-    If TempVars("IB_isFromPrisberegning").value = True _
-       And TempVars("IB_BeregnType").value = 2 Then
-
-        Dim dbl2990 As Double
-        Dim dbl1040Existing As Double
-        Dim dblOmkostninger As Double
-
-        dblOG = Nz(TempVars("IB_OGrad").value, 0)   ' fx 0,10
-
-        ' Omkostninger (positivt tal)
-        dbl2990 = Nz(ADOLookup("BudgetIalt", "tblInterntBudget", _
-            "Afdeling = '" & strAfdUni & "' AND Year_ = " & intYear_ & " AND Konto = '2990'"), 0)
-
-        ' Eksisterende omsætning (kan være 0 første gang)
-        dbl1040Existing = Nz(ADOLookup("BudgetIalt", "tblInterntBudget", _
-            "Afdeling = '" & strAfdUni & "' AND Year_ = " & intYear_ & " AND Konto = '1040'"), 0)
-
-        ' Samlede omkostninger
-        dblOmkostninger = dbl2990
-        If dbl1040Existing <> 0 Then
-            dblOmkostninger = dblOmkostninger + Abs(dbl1040Existing)
-        End If
-
-        ' ?? KORREKT omsætning ud fra ønsket overskudsgrad
-        ' R = C / (1 - OG)
-        dblOmsFiktiv = -(dblOmkostninger / (1 - dblOG))
-
-        dblMonthlyAmount = dblOmsFiktiv / 12
-
-        blnSuccess = UpdateInterntBudgetLineADO( _
-            strAfdUni, intYear_, "1040", _
-            dblOmsFiktiv, _
-            dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount, _
-            dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount, _
-            dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount, dblMonthlyAmount _
-        )
-
-        If Not blnSuccess Then
-            MsgBox "Konto 1040 blev ikke fundet i tblInterntBudget for afdeling " & _
-                   strAfdUni & " og år " & intYear_ & ".", _
-                   vbExclamation, "Konto ikke fundet"
-        End If
-    End If
     Call fncUpdateSumKti(strAfdUni, intYear_)
 
     Me.tbxOverskudsGrad = Format(Nz(ADOLookup("Overskudsgrad", "tblFB_Totaler", _

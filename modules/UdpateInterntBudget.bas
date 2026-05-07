@@ -229,6 +229,67 @@ NextRange:
         dblOverskudsGrad = 0
     End If
 
+    ' 5b) Justering af konto 1095 ift. ønsket OG fra Prisberegning
+    '     R_ønsket = -Omkostninger / (1 - OG_ønsket)
+    '     1095_ny  = 1095_eksisterende + (R_ønsket - dblOmsætning)
+    '     Genkører fncUpdateSumKti rekursivt; næste pass rammer tolerance og stopper.
+    If Nz(TempVars("IB_isFromPrisberegning"), False) = True Then
+        Dim dblOGØnsketPct As Double
+        dblOGØnsketPct = Nz(TempVars("IB_OGrad"), 0) * 100   ' decimal -> %
+
+        If dblOGØnsketPct > 0 And dblOGØnsketPct < 100 And dblOmkostninger > 0 Then
+            ' Tolerance: 0,1 procentpoint
+            If Abs(dblOverskudsGrad - dblOGØnsketPct) > 0.1 Then
+                Dim dblROenske As Double
+                Dim dbl1095Existing As Double
+                Dim dbl1095Ny As Double
+                Dim strNavnEksisterende As String
+
+                dblROenske = -dblOmkostninger / (1 - (dblOGØnsketPct / 100))
+
+                dbl1095Existing = Nz(ADOLookupValue(cn, _
+                    "SELECT BudgetIalt FROM tblInterntBudget " & _
+                    "WHERE Afdeling = ? AND Year_ = ? AND Konto = '1095'", _
+                    Array(strAfdUni, intYear)), 0)
+
+                dbl1095Ny = dbl1095Existing + (dblROenske - dblOmsætning)
+
+                ' KontoNavn: kun update hvis forskelligt
+                strNavnEksisterende = Nz(ADOLookupValue(cn, _
+                    "SELECT KontoNavn FROM tblInterntBudget " & _
+                    "WHERE Afdeling = ? AND Year_ = ? AND Konto = '1095'", _
+                    Array(strAfdUni, intYear)), "")
+
+                If strNavnEksisterende <> "Mgl. omsætning iht. OG" Then
+                    ExecuteNonQueryParams cn, _
+                        "UPDATE tblInterntBudget SET KontoNavn = ? " & _
+                        "WHERE Afdeling = ? AND Year_ = ? AND Konto = '1095'", _
+                        Array("Mgl. omsætning iht. OG", strAfdUni, intYear)
+                End If
+
+                ' Overskriv evt. brugerregulering på 1095, så vores beløb vinder
+                ExecuteNonQueryParams cn, _
+                    "UPDATE tblInterntBudget SET Regulering = NULL " & _
+                    "WHERE Afdeling = ? AND Year_ = ? AND Konto = '1095'", _
+                    Array(strAfdUni, intYear)
+
+                ' Luk forbindelsen før rekursivt kald (fncUpdIntBud + rekursion åbner egne)
+                If cn.State = adStateOpen Then cn.Close
+                Set cn = Nothing
+
+                If Not fncUpdIntBud(strAfdUni, intYear, "1095", dbl1095Ny, "12") Then
+                    MsgBox "Konto 1095 kunne ikke opdateres for afd. " & strAfdUni & _
+                           " og år " & intYear & "." & vbCrLf & _
+                           "Overskudsgrad-justering springes over.", vbExclamation
+                    fncUpdateSumKti = False
+                    Exit Function
+                End If
+                fncUpdateSumKti = fncUpdateSumKti(strAfdUni, intYear)
+                Exit Function
+            End If
+        End If
+    End If
+
     ' 6) Sikr række i tblFB_Totaler (Afdeling,Year_)
     EnsureFBTotalerRow cn, strAfdUni, intYear
 

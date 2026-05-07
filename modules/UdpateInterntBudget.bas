@@ -596,6 +596,17 @@ Private Sub UpdateIBFormUIIfOpen( _
 
         intPB_AntalPladser = Nz(Forms(frmName).txtPBAntalPladser.value, 0)
 
+        ' Fallback: hvis feltet er 0, brug antal debitorer for afd+år
+        If intPB_AntalPladser <= 0 Then
+            intPB_AntalPladser = Nz(ADOLookupValue(cn, _
+                "SELECT COUNT(*) FROM tblTmpDebtor " & _
+                "WHERE Afdeling = ? AND Year_ = ?", _
+                Array(strAfdUni, intYear)), 0)
+        End If
+
+        ' Opdater feltet med det antal der faktisk bruges (fra Prisberegning eller fallback)
+        Forms(frmName).txtPBAntalPladser.value = intPB_AntalPladser
+
         ' TotalÅrsværk hentes
         dblPB_AntalÅrsværk = Nz(ADOLookupValue(cn, _
             "SELECT TotalÅrsværk FROM tblFB_Totaler WHERE Afdeling = ? AND Year_ = ?", _

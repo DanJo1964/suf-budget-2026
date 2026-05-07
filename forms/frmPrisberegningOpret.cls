@@ -205,8 +205,8 @@ Private Sub btnOpretNyPrisberegning_Click()
 
     ' 5. Kopiér InterntBudget hvis nødvendig
     If isCurAfd Or isCurAfdM3 Then
-        sql = "INSERT INTO tblInterntBudget (Afdeling, Year_, [_1], [_2], [_3], [_4], [_5], [_6], [_7], [_8], [_9], [_10], [_11], [_12], BudgetIalt, EstimatForrigeÅr, EstimatFremskrevet, Kommentarer, Konto, Kontonavn, Kontotype, RealForrigeÅr, [Sum], Revision) " & _
-              "SELECT '" & strNavn & "', Year_, [_1], [_2], [_3], [_4], [_5], [_6], [_7], [_8], [_9], [_10], [_11], [_12], BudgetIalt, EstimatForrigeÅr, EstimatFremskrevet, Kommentarer, Konto, Kontonavn, Kontotype, RealForrigeÅr, [Sum], 0 " & _
+        sql = "INSERT INTO tblInterntBudget (Afdeling, Year_, [_1], [_2], [_3], [_4], [_5], [_6], [_7], [_8], [_9], [_10], [_11], [_12], BudgetIalt, Regulering, EstimatForrigeÅr, EstimatFremskrevet, Kommentarer, Konto, Kontonavn, Kontotype, RealForrigeÅr, [Sum], Revision) " & _
+              "SELECT '" & strNavn & "', Year_, [_1], [_2], [_3], [_4], [_5], [_6], [_7], [_8], [_9], [_10], [_11], [_12], BudgetIalt, Regulering, EstimatForrigeÅr, EstimatFremskrevet, Kommentarer, Konto, Kontonavn, Kontotype, RealForrigeÅr, [Sum], 0 " & _
               "FROM tblInterntBudget WHERE Afdeling = '" & strAfdUni & "' AND Year_ = " & intYear
         conn.Execute sql
     Else

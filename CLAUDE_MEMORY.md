@@ -79,3 +79,18 @@ Berører: SQL-strengen (linje 544) og rs.Fields-opslag (linje 555, 557).
 - fncKoncernNote: OK - tblInterntBudget har PrisberegningNavn
 - fncCleanUp: OK - tblTilbudsskabelon har PrisberegningNavn
 - CopyRecords: OK - kopierer fra trs som allerede har korrekt AfdU
+
+## BESLUTNING: Beskyt reguleringer på kto. 1102-1104 ved overførsel fra Prisberegning (29-06-2026)
+Status: AFKLARET - under test (Dan har oprettet testsag)
+
+### Problem
+`TransferToInterntBudget(strSumTable, intFortegn)` i frmSUF_InterntBudget.cls (kaldes fra btnLøn_Click via linjen `Call TransferToInterntBudget(strSumTable, 1)`) kører en rå parameteriseret UPDATE mod tblInterntBudget og overskriver Regulering, BudgetIalt og _1.._12 for hver konto i loopet. Det nulstiller manuelle reguleringer.
+
+### Ønsket adfærd
+Hvis frmSUF_InterntBudget er åbnet FRA frmPrisberegning, OG kontoen er 1102/1103/1104, OG den har en regulering (Regulering <> 0): spring hele UPDATE over for den række, så Regulering, BudgetIalt og _1.._12 forbliver urørte. Ellers kør som normalt.
+
+### Afklarede designvalg
+- Beskyttelsen ligger INDE i loopet (før cmd.Execute), ikke i kilde-SELECT'en. Samme mønster som fncUpdIntBud i UdpateInterntBudget.bas (ADOLookupValue mod tblInterntBudget på Afdeling/Year_/Konto).
+- Gates kun når TempVars("IB_isFromPrisberegning") = True. Flaget sættes allerede i Form_Load (parses fra OpenArgs sat af frmPrisberegning.cls linje 62) og læses allerede i btnLøn_Click linje 204.
+- Reguleringsopslaget SKAL bruge strDepartment (= Me.cboAfdelingUni.value) — samme variabel som UPDATE'ens WHERE. Når man kommer fra Prisberegning er denne værdi PrisberegningNavn (fx "BOAS NØRREBRO_v2"), og rækkerne i tblInterntBudget ligger netop med den værdi. Vigtigt at skelne alm. afdelingsbudget fra prisberegnings-budget (_v2-version).
+- Konti matches som TEKST (Konto er adVarWChar/type 200), eksplicit liste "1102"/"1103"/"1104" — ikke streng-interval (skrøbeligt: "11020" mv.).
